@@ -12,6 +12,9 @@ use Laminas\ServiceManager\ServiceLocatorInterface;
 
 use function method_exists;
 
+/**
+ * @deprecated Will be removed in this fork to reduce dependencies
+ */
 class UploadFileValidatorFactory implements FactoryInterface
 {
     /**

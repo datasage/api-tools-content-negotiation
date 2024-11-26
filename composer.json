@@ -37,8 +37,8 @@
         "laminas/laminas-eventmanager": "^2.6.3 || ^3.0.1",
         "laminas/laminas-filter": "^2.7.1",
         "laminas/laminas-http": "^2.5.4",
-        "laminas/laminas-mvc": "^2.7.15 || ^3.0.2",
-        "laminas/laminas-servicemanager": "^2.7.6 || ^3.1",
+        "laminas/laminas-mvc": "^3.0.2",
+        "laminas/laminas-servicemanager": "^3.1",
         "laminas/laminas-stdlib": "^2.7.8 || ^3.2.1",
         "laminas/laminas-validator": "^2.8.1",
         "laminas/laminas-view": "^2.8.1"
