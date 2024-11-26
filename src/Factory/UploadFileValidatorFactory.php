@@ -12,6 +12,9 @@ use Laminas\ServiceManager\ServiceLocatorInterface;
 
 use function method_exists;
 
+/**
+ * @deprecated Will be removed in this fork to reduce dependencies
+ */
 class UploadFileValidatorFactory implements FactoryInterface
 {
     /**
@@ -63,7 +66,6 @@ class UploadFileValidatorFactory implements FactoryInterface
     /**
      * Allow injecting options at build time; required for v2 compatibility.
      *
-     * @param array $options
      * @return void
      */
     public function setCreationOptions(array $options)

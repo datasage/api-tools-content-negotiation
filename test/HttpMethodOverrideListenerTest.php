@@ -40,7 +40,7 @@ class HttpMethodOverrideListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: HttpRequest::METHOD_*}> */
-    public function httpMethods(): array
+    public static function httpMethods(): array
     {
         return [
             'head'   => [HttpRequest::METHOD_HEAD],

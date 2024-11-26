@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 class ContentNegotiationOptionsTest extends TestCase
 {
     /** @psalm-return array<string, array{0: string, 1: string}> */
-    public function dashSeparatedOptions(): array
+    public static function dashSeparatedOptions(): array
     {
         return [
             'accept-whitelist'               => ['accept-whitelist', 'accept_whitelist'],

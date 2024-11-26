@@ -24,7 +24,6 @@ class ParameterDataContainer
     }
 
     /**
-     * @param  array $routeParams
      * @return self
      */
     public function setRouteParams(array $routeParams)
@@ -67,7 +66,6 @@ class ParameterDataContainer
     }
 
     /**
-     * @param  array $queryParams
      * @return self
      */
     public function setQueryParams(array $queryParams)
@@ -118,7 +116,6 @@ class ParameterDataContainer
     }
 
     /**
-     * @param  array $bodyParams
      * @return self
      */
     public function setBodyParams(array $bodyParams)

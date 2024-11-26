@@ -33,7 +33,6 @@ class ContentTypeFilterListener extends AbstractListenerAggregate
     /**
      * Set whitelist configuration
      *
-     * @param  array $config
      * @return self
      */
     public function setConfig(array $config)

@@ -107,7 +107,7 @@ class RenameUploadTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string}> */
-    public function uploadMethods(): array
+    public static function uploadMethods(): array
     {
         return [
             'put'   => ['PUT'],

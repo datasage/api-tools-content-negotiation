@@ -13,6 +13,9 @@ use function method_exists;
 use function rename;
 use function sprintf;
 
+/**
+ * @deprecated Will be removed in this fork to reduce dependencies
+ */
 class RenameUpload extends BaseFilter
 {
     /** @var RequestInterface */

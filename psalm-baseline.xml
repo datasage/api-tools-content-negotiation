@@ -1,971 +1,848 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.11.2@6fba5eb554f9507b72932f9c75533d8af593688d">
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="config/module.config.php">
+    <DeprecatedClass>
+      <code><![CDATA[Factory\UploadFileValidatorFactory::class]]></code>
+      <code><![CDATA[Factory\UploadFileValidatorFactory::class]]></code>
+    </DeprecatedClass>
+  </file>
   <file src="src/AcceptFilterListener.php">
-    <MixedArgument occurrences="3">
-      <code>$headers</code>
-      <code>$headers</code>
-      <code>$whitelistType</code>
+    <MixedArgument>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$whitelistType]]></code>
     </MixedArgument>
-    <MixedArrayOffset occurrences="1">
-      <code>$this-&gt;config[$controllerName]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$this->config[$controllerName]]]></code>
     </MixedArrayOffset>
-    <MixedAssignment occurrences="3">
-      <code>$controllerName</code>
-      <code>$headers</code>
-      <code>$whitelistType</code>
+    <MixedAssignment>
+      <code><![CDATA[$controllerName]]></code>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$whitelistType]]></code>
     </MixedAssignment>
-    <PossiblyInvalidMethodCall occurrences="1">
-      <code>match</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[match]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyNullReference occurrences="1">
-      <code>getParam</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getParam]]></code>
     </PossiblyNullReference>
-    <UndefinedMethod occurrences="1">
-      <code>match</code>
+    <UndefinedMethod>
+      <code><![CDATA[match]]></code>
     </UndefinedMethod>
   </file>
   <file src="src/AcceptListener.php">
-    <InvalidArgument occurrences="1">
-      <code>$controller</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[empty($criteria)]]></code>
+    </DocblockTypeContradiction>
+    <InvalidArgument>
+      <code><![CDATA[$controller]]></code>
     </InvalidArgument>
-    <MixedArgument occurrences="5">
-      <code>$child</code>
-      <code>$controllerName</code>
-      <code>$criteria</code>
-      <code>$criteria</code>
-      <code>$fallbackConfig</code>
+    <MixedArgument>
+      <code><![CDATA[$controllerName]]></code>
+      <code><![CDATA[$criteria]]></code>
+      <code><![CDATA[$criteria]]></code>
+      <code><![CDATA[$fallbackConfig]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="6">
-      <code>$child</code>
-      <code>$controllerName</code>
-      <code>$criteria</code>
-      <code>$criteria</code>
-      <code>$criteria</code>
-      <code>$fallbackConfig</code>
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[$result]]></code>
+    </MixedArgumentTypeCoercion>
+    <MixedAssignment>
+      <code><![CDATA[$controllerName]]></code>
+      <code><![CDATA[$criteria]]></code>
+      <code><![CDATA[$criteria]]></code>
+      <code><![CDATA[$criteria]]></code>
+      <code><![CDATA[$fallbackConfig]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>array|null</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array|null]]></code>
     </MixedInferredReturnType>
-    <MixedReturnStatement occurrences="1">
-      <code>$criteria</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$criteria]]></code>
     </MixedReturnStatement>
-    <ParadoxicalCondition occurrences="1">
-      <code>! $criteria || empty($criteria)</code>
-    </ParadoxicalCondition>
-    <PossiblyInvalidArgument occurrences="1">
-      <code>$result-&gt;getVariables()</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$result->getVariables()]]></code>
     </PossiblyInvalidArgument>
-    <PossiblyNullArgument occurrences="3">
-      <code>$fallbackConfig</code>
-      <code>$fallbackConfig</code>
-      <code>$fallbackConfig</code>
+    <PossiblyNullArgument>
+      <code><![CDATA[$fallbackConfig]]></code>
+      <code><![CDATA[$fallbackConfig]]></code>
+      <code><![CDATA[$fallbackConfig]]></code>
     </PossiblyNullArgument>
-    <PossiblyNullReference occurrences="1">
-      <code>getParam</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getParam]]></code>
     </PossiblyNullReference>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>is_string($criteria)</code>
+    <RedundantConditionGivenDocblockType>
+      <code><![CDATA[is_string($criteria)]]></code>
     </RedundantConditionGivenDocblockType>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[! $criteria]]></code>
+      <code><![CDATA[! $criteria]]></code>
+      <code><![CDATA[$this->getCriteria($criteria)]]></code>
+    </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/ContentNegotiationOptions.php">
-    <DeprecatedMethod occurrences="3">
-      <code>normalizeKey</code>
-      <code>normalizeKey</code>
-      <code>normalizeKey</code>
+    <DeprecatedMethod>
+      <code><![CDATA[normalizeKey]]></code>
+      <code><![CDATA[normalizeKey]]></code>
+      <code><![CDATA[normalizeKey]]></code>
     </DeprecatedMethod>
-    <MixedArgument occurrences="3">
-      <code>$config[$key]</code>
-      <code>$config[$normalizedKey]</code>
-      <code>$key</code>
+    <InvalidArgument>
+      <code><![CDATA[$options]]></code>
+    </InvalidArgument>
+    <MissingTemplateParam>
+      <code><![CDATA[ContentNegotiationOptions]]></code>
+    </MissingTemplateParam>
+    <MixedArgument>
+      <code><![CDATA[$config[$key]]]></code>
+      <code><![CDATA[$config[$normalizedKey]]]></code>
+      <code><![CDATA[$key]]></code>
     </MixedArgument>
-    <MixedArrayOffset occurrences="4">
-      <code>$config[$key]</code>
-      <code>$config[$key]</code>
-      <code>$mergedConfig[$key]</code>
-      <code>$mergedConfig[$key]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$config[$key]]]></code>
+      <code><![CDATA[$config[$key]]]></code>
+      <code><![CDATA[$mergedConfig[$key]]]></code>
+      <code><![CDATA[$mergedConfig[$key]]]></code>
     </MixedArrayOffset>
-    <MixedAssignment occurrences="3">
-      <code>$key</code>
-      <code>$mergedConfig[$normalizedKey]</code>
-      <code>$mergedConfig[$normalizedKey]</code>
+    <MixedAssignment>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$mergedConfig[$normalizedKey]]]></code>
+      <code><![CDATA[$mergedConfig[$normalizedKey]]]></code>
     </MixedAssignment>
-    <PossiblyInvalidArgument occurrences="1">
-      <code>$options</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$this->normalizeOptions($options)]]></code>
     </PossiblyInvalidArgument>
   </file>
   <file src="src/ContentTypeFilterListener.php">
-    <MixedArrayOffset occurrences="1">
-      <code>$this-&gt;config[$controllerName]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$this->config[$controllerName]]]></code>
     </MixedArrayOffset>
-    <MixedAssignment occurrences="4">
-      <code>$contentTypeHeader</code>
-      <code>$controllerName</code>
-      <code>$headers</code>
-      <code>$matched</code>
+    <MixedAssignment>
+      <code><![CDATA[$contentTypeHeader]]></code>
+      <code><![CDATA[$controllerName]]></code>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$matched]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="3">
-      <code>get</code>
-      <code>has</code>
-      <code>match</code>
+    <MixedMethodCall>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[match]]></code>
     </MixedMethodCall>
-    <PossiblyNullReference occurrences="1">
-      <code>getParam</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getParam]]></code>
     </PossiblyNullReference>
   </file>
   <file src="src/ContentTypeListener.php">
-    <InvalidCatch occurrences="1"/>
-    <MissingConstructor occurrences="1">
-      <code>$uploadTmpDir</code>
+    <InvalidCatch>
+      <code><![CDATA[try {
+                        $parser     = new MultipartContentParser($contentType, $request);
+                        $bodyParams = $parser->parse();
+                    } catch (Exception\ExceptionInterface $e) {
+                        $bodyParams = new ApiProblemResponse(new ApiProblem(
+                            400,
+                            $e
+                        ));
+                        break;
+                    }]]></code>
+    </InvalidCatch>
+    <MissingConstructor>
+      <code><![CDATA[$uploadTmpDir]]></code>
     </MissingConstructor>
-    <MixedArgument occurrences="7">
-      <code>$bodyParams</code>
-      <code>$fileInfo['tmp_name']</code>
-      <code>$fileInfo['tmp_name']</code>
-      <code>$fileInfo['tmp_name']</code>
-      <code>$fileInfo['tmp_name']</code>
-      <code>$message</code>
-      <code>$request-&gt;getQuery()-&gt;toArray()</code>
+    <MixedArgument>
+      <code><![CDATA[$bodyParams]]></code>
+      <code><![CDATA[$fileInfo['tmp_name']]]></code>
+      <code><![CDATA[$fileInfo['tmp_name']]]></code>
+      <code><![CDATA[$fileInfo['tmp_name']]]></code>
+      <code><![CDATA[$fileInfo['tmp_name']]]></code>
+      <code><![CDATA[$message]]></code>
+      <code><![CDATA[$request->getQuery()->toArray()]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="6">
-      <code>$data['_embedded']</code>
-      <code>$data['_embedded']</code>
-      <code>$fileInfo['tmp_name']</code>
-      <code>$fileInfo['tmp_name']</code>
-      <code>$fileInfo['tmp_name']</code>
-      <code>$fileInfo['tmp_name']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$data['_embedded']]]></code>
+      <code><![CDATA[$data['_embedded']]]></code>
+      <code><![CDATA[$fileInfo['tmp_name']]]></code>
+      <code><![CDATA[$fileInfo['tmp_name']]]></code>
+      <code><![CDATA[$fileInfo['tmp_name']]]></code>
+      <code><![CDATA[$fileInfo['tmp_name']]]></code>
     </MixedArrayAccess>
-    <MixedArrayAssignment occurrences="1">
-      <code>$data[$key]</code>
+    <MixedArrayAssignment>
+      <code><![CDATA[$data[$key]]]></code>
     </MixedArrayAssignment>
-    <MixedArrayOffset occurrences="1">
-      <code>$data[$key]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$data[$key]]]></code>
     </MixedArrayOffset>
-    <MixedAssignment occurrences="11">
-      <code>$bodyParams</code>
-      <code>$bodyParams</code>
-      <code>$bodyParams</code>
-      <code>$bodyParams</code>
-      <code>$data</code>
-      <code>$data[$key]</code>
-      <code>$events</code>
-      <code>$fileInfo</code>
-      <code>$key</code>
-      <code>$message</code>
-      <code>$value</code>
+    <MixedAssignment>
+      <code><![CDATA[$bodyParams]]></code>
+      <code><![CDATA[$bodyParams]]></code>
+      <code><![CDATA[$bodyParams]]></code>
+      <code><![CDATA[$bodyParams]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data[$key]]]></code>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$fileInfo]]></code>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$message]]></code>
+      <code><![CDATA[$value]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="4">
-      <code>attach</code>
-      <code>count</code>
-      <code>toArray</code>
-      <code>toArray</code>
+    <MixedMethodCall>
+      <code><![CDATA[attach]]></code>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[toArray]]></code>
+      <code><![CDATA[toArray]]></code>
     </MixedMethodCall>
-    <PossiblyNullReference occurrences="1">
-      <code>getParams</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getParams]]></code>
     </PossiblyNullReference>
-    <PossiblyUndefinedMethod occurrences="2">
-      <code>getQuery</code>
-      <code>setParam</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[setParam]]></code>
     </PossiblyUndefinedMethod>
-    <RedundantCondition occurrences="2">
-      <code>! $bodyParams</code>
-      <code>! $bodyParams</code>
+    <RedundantCondition>
+      <code><![CDATA[! $bodyParams]]></code>
+      <code><![CDATA[! $bodyParams]]></code>
     </RedundantCondition>
-    <TypeDoesNotContainType occurrences="2">
-      <code>$error === JSON_ERROR_NONE &amp;&amp; $isArray</code>
-      <code>$isArray</code>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[! $bodyParams]]></code>
+      <code><![CDATA[! $target]]></code>
+      <code><![CDATA[$contentType->match('application/json')]]></code>
+      <code><![CDATA[$contentType->match('application/json')]]></code>
+      <code><![CDATA[$contentType->match('multipart/form-data')]]></code>
+    </RiskyTruthyFalsyComparison>
+    <TypeDoesNotContainType>
+      <code><![CDATA[$error === JSON_ERROR_NONE && $isArray]]></code>
+      <code><![CDATA[$isArray]]></code>
     </TypeDoesNotContainType>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>getFiles</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getFiles]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/BodyParam.php">
-    <MixedAssignment occurrences="1">
-      <code>$parameterData</code>
+    <MixedAssignment>
+      <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="1">
-      <code>getPost</code>
+    <MixedMethodCall>
+      <code><![CDATA[getPost]]></code>
     </MixedMethodCall>
-    <PossiblyNullArgument occurrences="1">
-      <code>$param</code>
+    <PossiblyNullArgument>
+      <code><![CDATA[$param]]></code>
     </PossiblyNullArgument>
-    <PossiblyNullReference occurrences="1">
-      <code>getRequest</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getRequest]]></code>
     </PossiblyNullReference>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>getRequest</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getRequest]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/BodyParams.php">
-    <MixedAssignment occurrences="1">
-      <code>$parameterData</code>
+    <MixedAssignment>
+      <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>array|ArrayAccess</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array|ArrayAccess]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="1">
-      <code>getPost</code>
+    <MixedMethodCall>
+      <code><![CDATA[getPost]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>$controller-&gt;getRequest()-&gt;getPost()</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$controller->getRequest()->getPost()]]></code>
     </MixedReturnStatement>
-    <PossiblyNullReference occurrences="1">
-      <code>getRequest</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getRequest]]></code>
     </PossiblyNullReference>
-    <UndefinedDocblockClass occurrences="1">
-      <code>array|ArrayAccess</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[array|ArrayAccess]]></code>
     </UndefinedDocblockClass>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>getRequest</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getRequest]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/QueryParam.php">
-    <MixedAssignment occurrences="1">
-      <code>$parameterData</code>
+    <MixedAssignment>
+      <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="1">
-      <code>getQuery</code>
+    <MixedMethodCall>
+      <code><![CDATA[getQuery]]></code>
     </MixedMethodCall>
-    <PossiblyNullArgument occurrences="1">
-      <code>$param</code>
+    <PossiblyNullArgument>
+      <code><![CDATA[$param]]></code>
     </PossiblyNullArgument>
-    <PossiblyNullReference occurrences="1">
-      <code>getRequest</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getRequest]]></code>
     </PossiblyNullReference>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>getRequest</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getRequest]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/QueryParams.php">
-    <MixedAssignment occurrences="1">
-      <code>$parameterData</code>
+    <MixedAssignment>
+      <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>array</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="2">
-      <code>getQuery</code>
-      <code>toArray</code>
+    <MixedMethodCall>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[toArray]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>$this-&gt;getController()-&gt;getRequest()-&gt;getQuery()-&gt;toArray()</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$this->getController()->getRequest()->getQuery()->toArray()]]></code>
     </MixedReturnStatement>
-    <PossiblyNullReference occurrences="1">
-      <code>getRequest</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getRequest]]></code>
     </PossiblyNullReference>
-    <UndefinedDocblockClass occurrences="1">
-      <code>RuntimeException</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[RuntimeException]]></code>
     </UndefinedDocblockClass>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>getRequest</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getRequest]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/RouteParam.php">
-    <MixedAssignment occurrences="1">
-      <code>$parameterData</code>
+    <MixedAssignment>
+      <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="1">
-      <code>getParam</code>
+    <MixedMethodCall>
+      <code><![CDATA[getParam]]></code>
     </MixedMethodCall>
-    <PossiblyNullArgument occurrences="1">
-      <code>$param</code>
+    <PossiblyNullArgument>
+      <code><![CDATA[$param]]></code>
     </PossiblyNullArgument>
-    <PossiblyUndefinedMethod occurrences="1">
-      <code>getRouteMatch</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[getRouteMatch]]></code>
     </PossiblyUndefinedMethod>
   </file>
   <file src="src/ControllerPlugin/RouteParams.php">
-    <MixedAssignment occurrences="1">
-      <code>$parameterData</code>
+    <MixedAssignment>
+      <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>array</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="1">
-      <code>getParams</code>
+    <MixedMethodCall>
+      <code><![CDATA[getParams]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>$controller-&gt;getEvent()-&gt;getRouteMatch()-&gt;getParams()</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$controller->getEvent()->getRouteMatch()->getParams()]]></code>
     </MixedReturnStatement>
-    <PossiblyUndefinedMethod occurrences="1">
-      <code>getRouteMatch</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[getRouteMatch]]></code>
     </PossiblyUndefinedMethod>
   </file>
   <file src="src/Factory/AcceptFilterListenerFactory.php">
-    <MixedArgument occurrences="1">
-      <code>$options-&gt;getAcceptWhitelist()</code>
+    <MixedArgument>
+      <code><![CDATA[$options->getAcceptWhitelist()]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$options</code>
+    <MixedAssignment>
+      <code><![CDATA[$options]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="1">
-      <code>getAcceptWhitelist</code>
+    <MixedMethodCall>
+      <code><![CDATA[getAcceptWhitelist]]></code>
     </MixedMethodCall>
   </file>
   <file src="src/Factory/AcceptListenerFactory.php">
-    <MixedArgument occurrences="1">
-      <code>$container-&gt;get(ContentNegotiationOptions::class)-&gt;toArray()</code>
+    <MixedArgument>
+      <code><![CDATA[$container->get(ContentNegotiationOptions::class)->toArray()]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$plugins</code>
+    <MixedAssignment>
+      <code><![CDATA[$plugins]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>AcceptableViewModelSelector</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[AcceptableViewModelSelector]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="3">
-      <code>get</code>
-      <code>has</code>
-      <code>toArray</code>
+    <MixedMethodCall>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[toArray]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>$plugins-&gt;get('AcceptableViewModelSelector')</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$plugins->get('AcceptableViewModelSelector')]]></code>
     </MixedReturnStatement>
   </file>
   <file src="src/Factory/ContentNegotiationOptionsFactory.php">
-    <MixedInferredReturnType occurrences="1">
-      <code>array</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array]]></code>
     </MixedInferredReturnType>
-    <MixedReturnStatement occurrences="1">
-      <code>$config['api-tools-content-negotiation']</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$config['api-tools-content-negotiation']]]></code>
+      <code><![CDATA[$config['api-tools-content-negotiation']]]></code>
     </MixedReturnStatement>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$this->getConfig($container)]]></code>
+    </PossiblyInvalidArgument>
   </file>
   <file src="src/Factory/ContentTypeFilterListenerFactory.php">
-    <MixedArgument occurrences="1">
-      <code>$options-&gt;getContentTypeWhitelist()</code>
+    <MixedArgument>
+      <code><![CDATA[$options->getContentTypeWhitelist()]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$options</code>
+    <MixedAssignment>
+      <code><![CDATA[$options]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="1">
-      <code>getContentTypeWhitelist</code>
+    <MixedMethodCall>
+      <code><![CDATA[getContentTypeWhitelist]]></code>
     </MixedMethodCall>
   </file>
   <file src="src/Factory/HttpMethodOverrideListenerFactory.php">
-    <MixedArgument occurrences="1">
-      <code>$httpOverrideMethods</code>
+    <MixedArgument>
+      <code><![CDATA[$httpOverrideMethods]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="2">
-      <code>$httpOverrideMethods</code>
-      <code>$options</code>
+    <MixedAssignment>
+      <code><![CDATA[$httpOverrideMethods]]></code>
+      <code><![CDATA[$options]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="1">
-      <code>getHttpOverrideMethods</code>
+    <MixedMethodCall>
+      <code><![CDATA[getHttpOverrideMethods]]></code>
     </MixedMethodCall>
   </file>
   <file src="src/Factory/RenameUploadFilterFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>RenameUploadFilterFactory</code>
+    <DeprecatedClass>
+      <code><![CDATA[RenameUpload]]></code>
+      <code><![CDATA[RenameUpload]]></code>
+      <code><![CDATA[RenameUpload::class]]></code>
+      <code><![CDATA[new RenameUpload($options)]]></code>
+    </DeprecatedClass>
+    <DeprecatedInterface>
+      <code><![CDATA[RenameUploadFilterFactory]]></code>
     </DeprecatedInterface>
-    <DeprecatedMethod occurrences="1">
-      <code>getServiceLocator</code>
+    <DeprecatedMethod>
+      <code><![CDATA[getServiceLocator]]></code>
     </DeprecatedMethod>
-    <MixedArgument occurrences="1">
-      <code>$container-&gt;get('Request')</code>
+    <MixedArgument>
+      <code><![CDATA[$container->get('Request')]]></code>
     </MixedArgument>
-    <ParamNameMismatch occurrences="1">
-      <code>$container</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$container]]></code>
     </ParamNameMismatch>
-    <PossiblyNullArgument occurrences="1">
-      <code>$options</code>
+    <PossiblyNullArgument>
+      <code><![CDATA[$options]]></code>
     </PossiblyNullArgument>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>$container-&gt;getServiceLocator()</code>
+    <RedundantConditionGivenDocblockType>
+      <code><![CDATA[$container->getServiceLocator()]]></code>
     </RedundantConditionGivenDocblockType>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[$requestedName]]></code>
+    </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Factory/UploadFileValidatorFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>UploadFileValidatorFactory</code>
+    <DeprecatedClass>
+      <code><![CDATA[UploadFile]]></code>
+      <code><![CDATA[UploadFile]]></code>
+      <code><![CDATA[UploadFile::class]]></code>
+      <code><![CDATA[new UploadFile($options)]]></code>
+    </DeprecatedClass>
+    <DeprecatedInterface>
+      <code><![CDATA[UploadFileValidatorFactory]]></code>
     </DeprecatedInterface>
-    <DeprecatedMethod occurrences="2">
-      <code>getServiceLocator</code>
-      <code>getServiceLocator</code>
+    <DeprecatedMethod>
+      <code><![CDATA[getServiceLocator]]></code>
+      <code><![CDATA[getServiceLocator]]></code>
     </DeprecatedMethod>
-    <MixedArgument occurrences="1">
-      <code>$container-&gt;get('Request')</code>
+    <MixedArgument>
+      <code><![CDATA[$container->get('Request')]]></code>
     </MixedArgument>
-    <ParamNameMismatch occurrences="1">
-      <code>$container</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$container]]></code>
     </ParamNameMismatch>
-    <RedundantConditionGivenDocblockType occurrences="2">
-      <code>$container-&gt;getServiceLocator()</code>
-      <code>$container-&gt;getServiceLocator()</code>
+    <RedundantConditionGivenDocblockType>
+      <code><![CDATA[$container->getServiceLocator()]]></code>
+      <code><![CDATA[$container->getServiceLocator()]]></code>
     </RedundantConditionGivenDocblockType>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[$requestedName]]></code>
+    </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Filter/RenameUpload.php">
-    <DocblockTypeContradiction occurrences="1">
-      <code>null === $this-&gt;request</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[null === $this->request]]></code>
     </DocblockTypeContradiction>
-    <PropertyNotSetInConstructor occurrences="1">
-      <code>$request</code>
+    <MissingTemplateParam>
+      <code><![CDATA[RenameUpload]]></code>
+    </MissingTemplateParam>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[$request]]></code>
     </PropertyNotSetInConstructor>
+    <UndefinedClass>
+      <code><![CDATA[RenameUpload]]></code>
+      <code><![CDATA[RenameUpload]]></code>
+    </UndefinedClass>
   </file>
   <file src="src/HttpMethodOverrideListener.php">
-    <MixedArgument occurrences="3">
-      <code>$allowedMethods</code>
-      <code>$overrideMethod</code>
-      <code>$overrideMethod</code>
+    <MixedArgument>
+      <code><![CDATA[$allowedMethods]]></code>
+      <code><![CDATA[$overrideMethod]]></code>
+      <code><![CDATA[$overrideMethod]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="2">
-      <code>$allowedMethods</code>
-      <code>$overrideMethod</code>
+    <MixedAssignment>
+      <code><![CDATA[$allowedMethods]]></code>
+      <code><![CDATA[$overrideMethod]]></code>
     </MixedAssignment>
-    <PossiblyInvalidMethodCall occurrences="2">
-      <code>getFieldValue</code>
-      <code>has</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[has]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyUndefinedMethod occurrences="2">
-      <code>getFieldValue</code>
-      <code>has</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[has]]></code>
     </PossiblyUndefinedMethod>
   </file>
   <file src="src/JsonModel.php">
-    <DeprecatedClass occurrences="1">
-      <code>array|Traversable|JsonSerializable|StdlibJsonSerializable</code>
-    </DeprecatedClass>
-    <DeprecatedMethod occurrences="1">
-      <code>entity</code>
+    <DeprecatedMethod>
+      <code><![CDATA[entity]]></code>
     </DeprecatedMethod>
-    <DocblockTypeContradiction occurrences="1">
-      <code>false === $serialized</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[false === $serialized]]></code>
     </DocblockTypeContradiction>
-    <ImplementedParamTypeMismatch occurrences="1">
-      <code>$variables</code>
+    <ImplementedParamTypeMismatch>
+      <code><![CDATA[$variables]]></code>
+      <code><![CDATA[$variables]]></code>
     </ImplementedParamTypeMismatch>
-    <MixedAssignment occurrences="2">
-      <code>$variables</code>
-      <code>$variables</code>
+    <MixedAssignment>
+      <code><![CDATA[$variables]]></code>
+      <code><![CDATA[$variables]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>self</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[self]]></code>
     </MixedInferredReturnType>
-    <ParamNameMismatch occurrences="1">
-      <code>$flag</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$flag]]></code>
+      <code><![CDATA[$flag]]></code>
     </ParamNameMismatch>
-    <PossiblyUndefinedMethod occurrences="1">
-      <code>$variables</code>
-    </PossiblyUndefinedMethod>
-    <RedundantCondition occurrences="1">
-      <code>method_exists($variables, 'getEntity')</code>
-    </RedundantCondition>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>null !== $this-&gt;jsonpCallback</code>
-    </RedundantConditionGivenDocblockType>
-    <UndefinedDocblockClass occurrences="1">
-      <code>array|Traversable|JsonSerializable|StdlibJsonSerializable</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[array|Traversable|JsonSerializable]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="src/Module.php">
-    <MixedArgument occurrences="2">
-      <code>$services-&gt;get(AcceptListener::class)</code>
-      <code>$services-&gt;get(ContentTypeListener::class)</code>
+    <MixedArgument>
+      <code><![CDATA[$services->get(AcceptListener::class)]]></code>
+      <code><![CDATA[$services->get(ContentTypeListener::class)]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$contentNegotiationOptions</code>
+    <MixedAssignment>
+      <code><![CDATA[$contentNegotiationOptions]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="4">
-      <code>attach</code>
-      <code>attach</code>
-      <code>attach</code>
-      <code>getXHttpMethodOverrideEnabled</code>
+    <MixedMethodCall>
+      <code><![CDATA[attach]]></code>
+      <code><![CDATA[attach]]></code>
+      <code><![CDATA[attach]]></code>
+      <code><![CDATA[getXHttpMethodOverrideEnabled]]></code>
     </MixedMethodCall>
-    <PossiblyNullReference occurrences="1">
-      <code>attach</code>
+    <PossiblyNullReference>
+      <code><![CDATA[attach]]></code>
     </PossiblyNullReference>
   </file>
   <file src="src/MultipartContentParser.php">
-    <MixedArgument occurrences="5">
-      <code>$headers['CONTENT-DISPOSITION']</code>
-      <code>$headers['CONTENT-DISPOSITION']</code>
-      <code>$lastline</code>
-      <code>$lastline</code>
-      <code>$this-&gt;request-&gt;getContent()</code>
+    <MixedArgument>
+      <code><![CDATA[$headers['CONTENT-DISPOSITION']]]></code>
+      <code><![CDATA[$headers['CONTENT-DISPOSITION']]]></code>
+      <code><![CDATA[$lastline]]></code>
+      <code><![CDATA[$lastline]]></code>
+      <code><![CDATA[$this->request->getContent()]]></code>
     </MixedArgument>
-    <MixedInferredReturnType occurrences="1">
-      <code>string</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[string]]></code>
     </MixedInferredReturnType>
-    <MixedReturnStatement occurrences="1">
-      <code>$headers['CONTENT-TYPE']</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$headers['CONTENT-TYPE']]]></code>
     </MixedReturnStatement>
-    <PossiblyFalseArgument occurrences="2">
-      <code>$name</code>
-      <code>$name</code>
+    <PossiblyFalseArgument>
+      <code><![CDATA[$name]]></code>
+      <code><![CDATA[$name]]></code>
     </PossiblyFalseArgument>
-    <PossiblyInvalidArgument occurrences="5">
-      <code>$tmpFile</code>
-      <code>$tmpFile</code>
-      <code>$tmpFile</code>
-      <code>$tmpFile</code>
-      <code>$tmpFile</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
     </PossiblyInvalidArgument>
-    <PossiblyUndefinedArrayOffset occurrences="3">
-      <code>$file['error']</code>
-      <code>$file['tmp_name']</code>
-      <code>$file['tmp_name']</code>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$file['error']]]></code>
+      <code><![CDATA[$file['tmp_name']]]></code>
+      <code><![CDATA[$file['tmp_name']]]></code>
     </PossiblyUndefinedArrayOffset>
-    <PossiblyUndefinedVariable occurrences="2">
-      <code>$lastline</code>
-      <code>$lastline</code>
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$lastline]]></code>
+      <code><![CDATA[$lastline]]></code>
     </PossiblyUndefinedVariable>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[! $filename]]></code>
+      <code><![CDATA[! $filename]]></code>
+      <code><![CDATA[! $header]]></code>
+      <code><![CDATA[! $name]]></code>
+      <code><![CDATA[! $tmpFile]]></code>
+      <code><![CDATA[$filename]]></code>
+      <code><![CDATA[$filename]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[empty($tmpDir)]]></code>
+    </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Request.php">
-    <DocblockTypeContradiction occurrences="2">
-      <code>is_resource($this-&gt;contentStream)</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[! is_string($stream)
+            && ! is_resource($stream)]]></code>
+      <code><![CDATA[is_resource($this->contentStream)]]></code>
     </DocblockTypeContradiction>
-    <InvalidPropertyAssignmentValue occurrences="1">
-      <code>fopen('php://temp', 'r+')</code>
+    <InvalidPropertyAssignmentValue>
+      <code><![CDATA[fopen('php://temp', 'r+')]]></code>
     </InvalidPropertyAssignmentValue>
-    <MixedArgument occurrences="2">
-      <code>$this-&gt;content</code>
-      <code>$this-&gt;contentStream</code>
+    <MixedArgument>
+      <code><![CDATA[$this->content]]></code>
     </MixedArgument>
-    <MixedReturnStatement occurrences="1">
-      <code>$this-&gt;contentStream</code>
-    </MixedReturnStatement>
-    <PossiblyInvalidPropertyAssignmentValue occurrences="1">
-      <code>$stream</code>
+    <NoValue>
+      <code><![CDATA[$this->contentStream]]></code>
+      <code><![CDATA[return $this->contentStream;]]></code>
+    </NoValue>
+    <PossiblyInvalidPropertyAssignmentValue>
+      <code><![CDATA[$stream]]></code>
     </PossiblyInvalidPropertyAssignmentValue>
-    <PropertyNotSetInConstructor occurrences="6">
-      <code>Request</code>
-      <code>Request</code>
-      <code>Request</code>
-      <code>Request</code>
-      <code>Request</code>
-      <code>Request</code>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[Request]]></code>
+      <code><![CDATA[Request]]></code>
+      <code><![CDATA[Request]]></code>
+      <code><![CDATA[Request]]></code>
+      <code><![CDATA[Request]]></code>
+      <code><![CDATA[Request]]></code>
     </PropertyNotSetInConstructor>
   </file>
   <file src="src/Validator/UploadFile.php">
-    <MixedArgument occurrences="3">
-      <code>$this-&gt;abstractOptions['messages']</code>
-      <code>$value</code>
-      <code>$value</code>
+    <DeprecatedProperty>
+      <code><![CDATA[$this->abstractOptions]]></code>
+      <code><![CDATA[$this->abstractOptions]]></code>
+      <code><![CDATA[$this->abstractOptions]]></code>
+    </DeprecatedProperty>
+    <InvalidExtendClass>
+      <code><![CDATA[BaseValidator]]></code>
+    </InvalidExtendClass>
+    <MethodSignatureMismatch>
+      <code><![CDATA[public function isValid($value)]]></code>
+    </MethodSignatureMismatch>
+    <MixedArgument>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
     </MixedArgument>
-    <MixedArrayOffset occurrences="1">
-      <code>$this-&gt;abstractOptions['messages'][static::ATTACK]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$this->abstractOptions['messages'][static::ATTACK]]]></code>
     </MixedArrayOffset>
   </file>
   <file src="test/AcceptFilterListenerTest.php">
-    <MixedArgument occurrences="2">
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-    </MixedArgument>
-    <UndefinedThisPropertyAssignment occurrences="1">
-      <code>$this-&gt;listener</code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="1">
-      <code>$this-&gt;listener</code>
-    </UndefinedThisPropertyFetch>
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
   </file>
   <file src="test/AcceptListenerTest.php">
-    <ArgumentTypeCoercion occurrences="1">
-      <code>$this-&gt;event-&gt;getRequest()</code>
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$this->event->getRequest()]]></code>
     </ArgumentTypeCoercion>
-    <InvalidArgument occurrences="1">
-      <code>$selector</code>
-    </InvalidArgument>
-    <MixedArgument occurrences="3">
-      <code>$response-&gt;getApiProblem()-&gt;detail</code>
-      <code>$selector</code>
-      <code>$this-&gt;event</code>
+    <MixedArgument>
+      <code><![CDATA[$response->getApiProblem()->detail]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="3">
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$selector</code>
-    </MixedAssignment>
-    <MixedFunctionCall occurrences="2">
-      <code>$listener($this-&gt;event)</code>
-      <code>$listener($this-&gt;event)</code>
-    </MixedFunctionCall>
-    <MixedMethodCall occurrences="5">
-      <code>plugin</code>
-      <code>setRequest</code>
-      <code>setResult</code>
-      <code>setResult</code>
-      <code>setResult</code>
-    </MixedMethodCall>
-    <PossiblyInvalidArgument occurrences="1"/>
-    <UndefinedThisPropertyAssignment occurrences="3">
-      <code>$this-&gt;controller</code>
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;listener</code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="6">
-      <code>$this-&gt;controller</code>
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-    </UndefinedThisPropertyFetch>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$this->createRouteMatch([
+            'controller' => __NAMESPACE__ . '\TestAsset\ContentTypeController',
+        ])]]></code>
+    </PossiblyInvalidArgument>
   </file>
   <file src="test/ContentTypeFilterListenerTest.php">
-    <MixedArgument occurrences="1">
-      <code>$response-&gt;getApiProblem()-&gt;detail</code>
+    <MixedArgument>
+      <code><![CDATA[$response->getApiProblem()->detail]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="2">
-      <code>$request</code>
-      <code>$request</code>
-    </MixedAssignment>
-    <MixedMethodCall occurrences="18">
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getRequest</code>
-      <code>getRequest</code>
-      <code>getRequest</code>
-      <code>onRoute</code>
-      <code>onRoute</code>
-      <code>onRoute</code>
-      <code>onRoute</code>
-      <code>setConfig</code>
-      <code>setConfig</code>
-      <code>setConfig</code>
-      <code>setContent</code>
-      <code>setContent</code>
+    <MixedMethodCall>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
     </MixedMethodCall>
-    <PossiblyInvalidArgument occurrences="1"/>
-    <UndefinedThisPropertyAssignment occurrences="2">
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;listener</code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="8">
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-    </UndefinedThisPropertyFetch>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$this->createRouteMatch([
+            'controller' => __NAMESPACE__ . '\TestAsset\ContentTypeController',
+        ])]]></code>
+    </PossiblyInvalidArgument>
   </file>
   <file src="test/ContentTypeListenerTest.php">
-    <InvalidDocblock occurrences="1">
-      <code>public function multipartFormDataMethods(): array</code>
+    <InvalidDocblock>
+      <code><![CDATA[public static function multipartFormDataMethods(): array]]></code>
     </InvalidDocblock>
-    <MixedArgument occurrences="9">
-      <code>$details['detail']</code>
-      <code>$file['tmp_name']</code>
-      <code>$file['tmp_name']</code>
-      <code>$file['tmp_name']</code>
-      <code>$file['tmp_name']</code>
-      <code>$problem-&gt;detail</code>
-      <code>$problem-&gt;detail</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
+    <MixedArgument>
+      <code><![CDATA[$details['detail']]]></code>
+      <code><![CDATA[$file['tmp_name']]]></code>
+      <code><![CDATA[$file['tmp_name']]]></code>
+      <code><![CDATA[$file['tmp_name']]]></code>
+      <code><![CDATA[$file['tmp_name']]]></code>
+      <code><![CDATA[$problem->detail]]></code>
+      <code><![CDATA[$problem->detail]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="31">
-      <code>$files</code>
-      <code>$files</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$listener</code>
-      <code>$parameterData</code>
-      <code>$parameterData</code>
-      <code>$parameterData</code>
-      <code>$params</code>
-      <code>$params</code>
-      <code>$params</code>
-      <code>$params</code>
-      <code>$params</code>
-      <code>$params</code>
-      <code>$params</code>
-      <code>$params</code>
-      <code>$params</code>
-      <code>$params</code>
+    <MixedAssignment>
+      <code><![CDATA[$files]]></code>
+      <code><![CDATA[$files]]></code>
+      <code><![CDATA[$parameterData]]></code>
+      <code><![CDATA[$parameterData]]></code>
+      <code><![CDATA[$parameterData]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$params]]></code>
     </MixedAssignment>
-    <MixedFunctionCall occurrences="16">
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-      <code>$listener($event)</code>
-    </MixedFunctionCall>
-    <MixedInferredReturnType occurrences="1">
-      <code>array</code>
-    </MixedInferredReturnType>
-    <MixedMethodCall occurrences="17">
-      <code>count</code>
-      <code>count</code>
-      <code>get</code>
-      <code>get</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>onFinish</code>
-      <code>onFinish</code>
-      <code>onFinish</code>
+    <MixedMethodCall>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
     </MixedMethodCall>
-    <PossiblyInvalidArgument occurrences="16">
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;createRouteMatch([])</code>
+    <MixedReturnStatement>
+      <code><![CDATA[array]]></code>
+    </MixedReturnStatement>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
     </PossiblyInvalidArgument>
-    <PossiblyInvalidMethodCall occurrences="14">
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyUndefinedMethod occurrences="14">
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
     </PossiblyUndefinedMethod>
-    <UndefinedThisPropertyAssignment occurrences="1">
-      <code>$this-&gt;listener</code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="19">
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-      <code>$this-&gt;listener</code>
-    </UndefinedThisPropertyFetch>
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
   </file>
   <file src="test/Factory/AcceptFilterListenerFactoryTest.php">
-    <TooManyArguments occurrences="1">
-      <code>$factory</code>
+    <TooManyArguments>
+      <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
   <file src="test/Factory/AcceptListenerFactoryTest.php">
-    <TooManyArguments occurrences="1">
-      <code>$factory</code>
+    <TooManyArguments>
+      <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
   <file src="test/Factory/ContentNegotiationOptionsFactoryTest.php">
-    <TooManyArguments occurrences="3">
-      <code>$factory</code>
-      <code>$factory</code>
-      <code>$factory</code>
+    <TooManyArguments>
+      <code><![CDATA[$factory]]></code>
+      <code><![CDATA[$factory]]></code>
+      <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
   <file src="test/Factory/ContentTypeFilterListenerFactoryTest.php">
-    <TooManyArguments occurrences="1">
-      <code>$factory</code>
+    <TooManyArguments>
+      <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
   <file src="test/Factory/HttpMethodOverrideListenerFactoryTest.php">
-    <MixedArgument occurrences="1">
-      <code>$container-&gt;reveal()</code>
+    <MixedArgument>
+      <code><![CDATA[$container->reveal()]]></code>
     </MixedArgument>
-    <MixedMethodCall occurrences="1">
-      <code>willReturn</code>
+    <MixedMethodCall>
+      <code><![CDATA[willReturn]]></code>
     </MixedMethodCall>
-    <PossiblyInvalidMethodCall occurrences="1">
-      <code>willReturn</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[willReturn]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyUndefinedMethod occurrences="1">
-      <code>reveal</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[reveal]]></code>
     </PossiblyUndefinedMethod>
-    <TooManyArguments occurrences="1">
-      <code>$factory</code>
+    <TooManyArguments>
+      <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
-  <file src="test/Factory/RenameUploadFilterFactoryTest.php">
-    <MixedAssignment occurrences="2">
-      <code>$filter</code>
-      <code>$otherFilter</code>
-    </MixedAssignment>
-    <MixedMethodCall occurrences="2">
-      <code>getTarget</code>
-      <code>getTarget</code>
-    </MixedMethodCall>
-  </file>
   <file src="test/Filter/RenameUploadTest.php">
-    <InvalidScalarArgument occurrences="1">
-      <code>$file['tmp_name']</code>
-    </InvalidScalarArgument>
-    <MixedArgument occurrences="7">
-      <code>$this-&gt;targetDir</code>
-      <code>$this-&gt;targetDir</code>
-      <code>$this-&gt;tmpDir</code>
-      <code>$this-&gt;tmpDir</code>
-      <code>$this-&gt;uploadDir</code>
-      <code>$this-&gt;uploadDir</code>
-      <code>$this-&gt;uploadDir</code>
-    </MixedArgument>
-    <MixedOperand occurrences="1">
-      <code>$this-&gt;targetDir</code>
-    </MixedOperand>
-    <UndefinedDocblockClass occurrences="1">
-      <code>$filter-&gt;filter($file)</code>
-    </UndefinedDocblockClass>
-    <UndefinedThisPropertyAssignment occurrences="3">
-      <code>$this-&gt;targetDir</code>
-      <code>$this-&gt;tmpDir</code>
-      <code>$this-&gt;uploadDir</code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="5">
-      <code>$this-&gt;targetDir</code>
-      <code>$this-&gt;targetDir</code>
-      <code>$this-&gt;tmpDir</code>
-      <code>$this-&gt;uploadDir</code>
-      <code>$this-&gt;uploadDir</code>
-    </UndefinedThisPropertyFetch>
+    <DeprecatedClass>
+      <code><![CDATA[new RenameUpload($target)]]></code>
+    </DeprecatedClass>
   </file>
   <file src="test/HttpMethodOverrideListenerTest.php">
-    <MixedArgument occurrences="2">
-      <code>$problem-&gt;detail</code>
-      <code>$problem-&gt;detail</code>
+    <MixedArgument>
+      <code><![CDATA[$problem->detail]]></code>
+      <code><![CDATA[$problem->detail]]></code>
     </MixedArgument>
-    <PossiblyInvalidArgument occurrences="1">
-      <code>$this-&gt;createRouteMatch([])</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$this->createRouteMatch([])]]></code>
     </PossiblyInvalidArgument>
-    <PossiblyInvalidMethodCall occurrences="3">
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyUndefinedMethod occurrences="3">
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
     </PossiblyUndefinedMethod>
   </file>
   <file src="test/JsonModelTest.php">
-    <InvalidArgument occurrences="1">
-      <code>new TestAsset\ModelWithJson()</code>
+    <InvalidArgument>
+      <code><![CDATA[new TestAsset\ModelWithJson()]]></code>
     </InvalidArgument>
-    <MixedAssignment occurrences="2">
-      <code>$data</code>
-      <code>$data</code>
+    <MixedAssignment>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
     </MixedAssignment>
   </file>
   <file src="test/RequestTest.php">
-    <MixedArgument occurrences="6">
-      <code>$stream</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-    </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$stream</code>
-    </MixedAssignment>
-    <MixedMethodCall occurrences="4">
-      <code>getContentAsStream</code>
-      <code>getContentAsStream</code>
-      <code>setContentStream</code>
-      <code>setContentStream</code>
-    </MixedMethodCall>
-    <UndefinedThisPropertyAssignment occurrences="1">
-      <code>$this-&gt;request</code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="7">
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-    </UndefinedThisPropertyFetch>
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
   </file>
   <file src="test/RouteMatchFactoryTrait.php">
-    <UndefinedDocblockClass occurrences="1">
-      <code>V2RouteMatch|RouteMatch</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[V2RouteMatch|RouteMatch]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="test/Validator/UploadFileTest.php">
-    <InvalidScalarArgument occurrences="1">
-      <code>1</code>
-    </InvalidScalarArgument>
-    <MixedMethodCall occurrences="3">
-      <code>getMessages</code>
-      <code>isValid</code>
-      <code>setRequest</code>
-    </MixedMethodCall>
-    <PossiblyNullArgument occurrences="1">
-      <code>var_export($this-&gt;validator-&gt;getMessages(), 1)</code>
-    </PossiblyNullArgument>
-    <UndefinedThisPropertyAssignment occurrences="1">
-      <code>$this-&gt;validator</code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="1">
-      <code>$this-&gt;validator</code>
-    </UndefinedThisPropertyFetch>
+    <DeprecatedClass>
+      <code><![CDATA[UploadFile]]></code>
+      <code><![CDATA[new UploadFile()]]></code>
+    </DeprecatedClass>
   </file>
 </files>

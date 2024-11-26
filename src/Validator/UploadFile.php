@@ -10,6 +10,9 @@ use Laminas\Validator\File\UploadFile as BaseValidator;
 use function count;
 use function method_exists;
 
+/**
+ * @deprecated Will be removed in this fork to reduce dependencies
+ */
 class UploadFile extends BaseValidator
 {
     /** @var null|RequestInterface */
