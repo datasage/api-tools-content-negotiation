@@ -106,7 +106,7 @@ class ContentTypeListenerTest extends TestCase
         $this->assertStringContainsString('JSON decoding', $problem->detail);
     }
 
-    /** @psalm-param array<string, array{0: string}> */
+    /** @psalm-param array<string, array<array-key, string> */
     public static function multipartFormDataMethods(): array
     {
         return [

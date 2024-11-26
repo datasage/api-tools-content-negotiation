@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="config/module.config.php">
+    <DeprecatedClass>
+      <code><![CDATA[Factory\UploadFileValidatorFactory::class]]></code>
+      <code><![CDATA[Factory\UploadFileValidatorFactory::class]]></code>
+    </DeprecatedClass>
+  </file>
   <file src="src/AcceptFilterListener.php">
     <MixedArgument>
       <code><![CDATA[$headers]]></code>
@@ -386,6 +392,12 @@
     </MixedMethodCall>
   </file>
   <file src="src/Factory/RenameUploadFilterFactory.php">
+    <DeprecatedClass>
+      <code><![CDATA[RenameUpload]]></code>
+      <code><![CDATA[RenameUpload]]></code>
+      <code><![CDATA[RenameUpload::class]]></code>
+      <code><![CDATA[new RenameUpload($options)]]></code>
+    </DeprecatedClass>
     <DeprecatedInterface>
       <code><![CDATA[RenameUploadFilterFactory]]></code>
     </DeprecatedInterface>
@@ -409,6 +421,12 @@
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Factory/UploadFileValidatorFactory.php">
+    <DeprecatedClass>
+      <code><![CDATA[UploadFile]]></code>
+      <code><![CDATA[UploadFile]]></code>
+      <code><![CDATA[UploadFile::class]]></code>
+      <code><![CDATA[new UploadFile($options)]]></code>
+    </DeprecatedClass>
     <DeprecatedInterface>
       <code><![CDATA[UploadFileValidatorFactory]]></code>
     </DeprecatedInterface>
@@ -487,7 +505,7 @@
       <code><![CDATA[$flag]]></code>
     </ParamNameMismatch>
     <UndefinedDocblockClass>
-      <code><![CDATA[array|Traversable|JsonSerializable|StdlibJsonSerializable]]></code>
+      <code><![CDATA[array|Traversable|JsonSerializable]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="src/Module.php">
@@ -637,7 +655,7 @@
   </file>
   <file src="test/ContentTypeListenerTest.php">
     <InvalidDocblock>
-      <code><![CDATA[public function multipartFormDataMethods(): array]]></code>
+      <code><![CDATA[public static function multipartFormDataMethods(): array]]></code>
     </InvalidDocblock>
     <MixedArgument>
       <code><![CDATA[$details['detail']]]></code>
@@ -777,6 +795,11 @@
       <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
+  <file src="test/Filter/RenameUploadTest.php">
+    <DeprecatedClass>
+      <code><![CDATA[new RenameUpload($target)]]></code>
+    </DeprecatedClass>
+  </file>
   <file src="test/HttpMethodOverrideListenerTest.php">
     <MixedArgument>
       <code><![CDATA[$problem->detail]]></code>
@@ -815,5 +838,11 @@
     <UndefinedDocblockClass>
       <code><![CDATA[V2RouteMatch|RouteMatch]]></code>
     </UndefinedDocblockClass>
+  </file>
+  <file src="test/Validator/UploadFileTest.php">
+    <DeprecatedClass>
+      <code><![CDATA[UploadFile]]></code>
+      <code><![CDATA[new UploadFile()]]></code>
+    </DeprecatedClass>
   </file>
 </files>
