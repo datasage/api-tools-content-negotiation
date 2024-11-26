@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5516cfc3421cc3da7395e3f7093d3c1",
+    "content-hash": "d12e0f8917e0b6fe1a5e074204dd5b0d",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -2292,21 +2292,15 @@
         },
         {
             "name": "laminas-api-tools/api-tools-hal",
-            "version": "1.10.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laminas-api-tools/api-tools-hal.git",
-                "reference": "3cc89f2acce62e1a5b814f640993b27e8bb8de85"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-hal/zipball/3cc89f2acce62e1a5b814f640993b27e8bb8de85",
-                "reference": "3cc89f2acce62e1a5b814f640993b27e8bb8de85",
-                "shasum": ""
+                "url": "https://github.com/datasage/api-tools-hal",
+                "reference": "151857f7c96288b7eaeabd41bb83dfd8d56b8017"
             },
             "require": {
                 "ext-json": "*",
-                "laminas-api-tools/api-tools-api-problem": "^1.6.0",
+                "laminas-api-tools/api-tools-api-problem": "^1.8.0",
                 "laminas/laminas-eventmanager": "^3.0.1",
                 "laminas/laminas-filter": "^2.7.1",
                 "laminas/laminas-http": "^2.5.4",
@@ -2316,22 +2310,21 @@
                 "laminas/laminas-stdlib": "^3.0.1",
                 "laminas/laminas-uri": "^2.5.2",
                 "laminas/laminas-view": "^2.11.4",
-                "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
                 "psr/link": "^1.0 || ^2.0"
             },
             "replace": {
                 "zfcampus/zf-hal": "^1.6.0"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "~2.3.0",
+                "laminas/laminas-coding-standard": "^3",
                 "laminas/laminas-modulemanager": "^2.10.1",
                 "laminas/laminas-router": "^3.11",
                 "phpdocumentor/reflection-docblock": "^5.2.2",
-                "phpspec/prophecy-phpunit": "^2.0",
-                "phpunit/phpunit": "^9.5.27",
-                "psalm/plugin-phpunit": "^0.16.1",
-                "vimeo/psalm": "^4.30"
+                "phpspec/prophecy-phpunit": "^2",
+                "phpunit/phpunit": "^10",
+                "psalm/plugin-phpunit": "^0.19",
+                "vimeo/psalm": "^5"
             },
             "type": "library",
             "extra": {
@@ -2344,7 +2337,32 @@
                     "Laminas\\ApiTools\\Hal\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "LaminasTest\\ApiTools\\Hal\\": "test/"
+                }
+            },
+            "scripts": {
+                "check": [
+                    "@cs-check",
+                    "@test"
+                ],
+                "cs-check": [
+                    "phpcs"
+                ],
+                "cs-fix": [
+                    "phpcbf"
+                ],
+                "test": [
+                    "phpunit"
+                ],
+                "test-coverage": [
+                    "phpunit --coverage-clover clover.xml"
+                ],
+                "static-analysis": [
+                    "psalm --shepherd --stats --show-info=true"
+                ]
+            },
             "license": [
                 "BSD-3-Clause"
             ],
@@ -2359,20 +2377,14 @@
                 "rest"
             ],
             "support": {
-                "chat": "https://laminas.dev/chat",
                 "docs": "https://api-tools.getlaminas.org/documentation",
-                "forum": "https://discourse.laminas.dev",
                 "issues": "https://github.com/laminas-api-tools/api-tools-hal/issues",
+                "source": "https://github.com/laminas-api-tools/api-tools-hal",
                 "rss": "https://github.com/laminas-api-tools/api-tools-hal/releases.atom",
-                "source": "https://github.com/laminas-api-tools/api-tools-hal"
+                "chat": "https://laminas.dev/chat",
+                "forum": "https://discourse.laminas.dev"
             },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "time": "2023-07-10T20:48:58+00:00"
+            "time": "2024-11-26T19:11:59+00:00"
         },
         {
             "name": "laminas/laminas-coding-standard",
@@ -2582,69 +2594,6 @@
                 }
             ],
             "time": "2024-10-16T13:10:19+00:00"
-        },
-        {
-            "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "eb0d96c708b92177a92bc2239543d3ed523452c6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/eb0d96c708b92177a92bc2239543d3ed523452c6",
-                "reference": "eb0d96c708b92177a92bc2239543d3ed523452c6",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^10.4",
-                "psalm/plugin-phpunit": "^0.18.0",
-                "squizlabs/php_codesniffer": "^3.7.1",
-                "vimeo/psalm": "^5.16.0"
-            },
-            "type": "library",
-            "extra": {
-                "laminas": {
-                    "module": "Laminas\\ZendFrameworkBridge"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/autoload.php"
-                ],
-                "psr-4": {
-                    "Laminas\\ZendFrameworkBridge\\": "src//"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Alias legacy ZF class names to Laminas Project equivalents.",
-            "keywords": [
-                "ZendFramework",
-                "autoloading",
-                "laminas",
-                "zf"
-            ],
-            "support": {
-                "forum": "https://discourse.laminas.dev/",
-                "issues": "https://github.com/laminas/laminas-zendframework-bridge/issues",
-                "rss": "https://github.com/laminas/laminas-zendframework-bridge/releases.atom",
-                "source": "https://github.com/laminas/laminas-zendframework-bridge"
-            },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "abandoned": true,
-            "time": "2023-11-24T13:56:19+00:00"
         },
         {
             "name": "myclabs/deep-copy",

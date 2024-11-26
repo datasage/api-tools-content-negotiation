@@ -79,6 +79,10 @@
         {
           "type": "git",
           "url": "https://github.com/datasage/api-tools-api-problem"
+        },
+        {
+          "type": "git",
+          "url": "https://github.com/datasage/api-tools-hal"
         }
     ]
 }
