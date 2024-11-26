@@ -290,7 +290,6 @@ class MultipartContentParser
     /**
      * Retrieve the part name from the content disposition, if present
      *
-     * @param  array $headers
      * @return false|string
      */
     protected function getNameFromHeaders(array $headers)
@@ -309,7 +308,6 @@ class MultipartContentParser
     /**
      * Retrieve the filename from the content disposition, if present
      *
-     * @param  array $headers
      * @return false|string
      */
     protected function getFilenameFromHeaders(array $headers)
@@ -328,7 +326,6 @@ class MultipartContentParser
     /**
      * Retrieve the MIME type of the MIME part
      *
-     * @param  array $headers
      * @return string
      */
     protected function getMimeTypeFromHeaders(array $headers)

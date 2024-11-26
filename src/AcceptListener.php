@@ -26,9 +26,6 @@ class AcceptListener
     /** @var array */
     protected $selectorsConfig = [];
 
-    /**
-     * @param array $config
-     */
     public function __construct(AcceptableViewModelSelector $selector, array $config)
     {
         $this->selector = $selector;

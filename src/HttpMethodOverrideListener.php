@@ -20,9 +20,6 @@ class HttpMethodOverrideListener extends AbstractListenerAggregate
     /** @var array */
     protected $httpMethodOverride = [];
 
-    /**
-     * @param array $httpMethodOverride
-     */
     public function __construct(array $httpMethodOverride)
     {
         $this->httpMethodOverride = $httpMethodOverride;

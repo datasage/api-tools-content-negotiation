@@ -48,7 +48,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string}> */
-    public function methodsWithBodies(): array
+    public static function methodsWithBodies(): array
     {
         return [
             'post'   => ['POST'],
@@ -107,7 +107,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-param array<string, array{0: string}> */
-    public function multipartFormDataMethods(): array
+    public static function multipartFormDataMethods(): array
     {
         return [
             'patch'  => ['patch'],
@@ -336,7 +336,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string, 1: string}> */
-    public function methodsWithBlankBodies(): array
+    public static function methodsWithBlankBodies(): array
     {
         return [
             'post-space'             => ['POST', ' '],
@@ -381,7 +381,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string, 1: string}> */
-    public function methodsWithLeadingWhitespace(): array
+    public static function methodsWithLeadingWhitespace(): array
     {
         return [
             'post-space'             => ['POST', ' {"foo": "bar"}'],
@@ -424,7 +424,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string, 1: string}> */
-    public function methodsWithTrailingWhitespace(): array
+    public static function methodsWithTrailingWhitespace(): array
     {
         return [
             'post-space'             => ['POST', '{"foo": "bar"} '],
@@ -467,7 +467,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string, 1: string}> */
-    public function methodsWithLeadingAndTrailingWhitespace(): array
+    public static function methodsWithLeadingAndTrailingWhitespace(): array
     {
         return [
             'post-space'             => ['POST', ' {"foo": "bar"} '],
@@ -510,7 +510,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string, 1: string}> */
-    public function methodsWithWhitespaceInsideBody(): array
+    public static function methodsWithWhitespaceInsideBody(): array
     {
         return [
             'post-space'   => ['POST', '{"foo": "bar foo"}'],
@@ -641,7 +641,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0:string, 1: string, 2: string|int}> */
-    public function methodsWithStringContent(): array
+    public static function methodsWithStringContent(): array
     {
         return [
             'delete-string'      => ['DELETE', 'String Content', 'String_Content'],
@@ -684,7 +684,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return iterable<string, array{0: string, 1: string, 2: array|object}> */
-    public function nonPostMethodsContent(): iterable
+    public static function nonPostMethodsContent(): iterable
     {
         $dataSets = [
             'object' => [

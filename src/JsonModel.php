@@ -8,7 +8,6 @@ use JsonSerializable;
 use Laminas\ApiTools\Hal\Collection as HalCollection;
 use Laminas\ApiTools\Hal\Entity as HalEntity;
 use Laminas\Json\Json;
-use Laminas\Stdlib\JsonSerializable as StdlibJsonSerializable;
 use Laminas\View\Model\JsonModel as BaseJsonModel;
 
 use function json_last_error;
@@ -34,7 +33,7 @@ class JsonModel extends BaseJsonModel
      *
      * Overrides parent to extract variables from JsonSerializable objects.
      *
-     * @param  array|Traversable|JsonSerializable|StdlibJsonSerializable $variables
+     * @param  array|Traversable|JsonSerializable $variables
      * @param  bool $overwrite
      * @return self
      */
@@ -42,7 +41,6 @@ class JsonModel extends BaseJsonModel
     {
         if (
             $variables instanceof JsonSerializable
-            || $variables instanceof StdlibJsonSerializable
         ) {
             $variables = $variables->jsonSerialize();
         }
