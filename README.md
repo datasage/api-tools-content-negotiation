@@ -248,24 +248,6 @@ The following configuration is provided in `config/module.config.php` to enable 
 function:
 
 ```php
-'filters' => [
-    'aliases'   => [
-        'Laminas\Filter\File\RenameUpload' => 'filerenameupload',
-    ],
-    'factories' => [
-        'filerenameupload' => Factory\RenameUploadFilterFactory::class,
-    ],
-],
-
-'validators' => [
-    'aliases'   => [
-        'Laminas\Validator\File\UploadFile' => 'fileuploadfile',
-    ],
-    'factories' => [
-        'fileuploadfile' => Factory\UploadFileValidatorFactory::class,
-    ],
-],
-
 'service_manager' => [
     'factories' => [
         ContentTypeListener::class        => InvokableFactory::class,
