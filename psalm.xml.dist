@@ -13,7 +13,6 @@
         <ignoreFiles>
             <directory name="test/TestAsset"/>
             <directory name="vendor"/>
-            <file name="src/Factory/RequestFactory.php"/>
         </ignoreFiles>
     </projectFiles>
 
@@ -41,30 +40,6 @@
                 <directory name="test"/>
             </errorLevel>
         </RedundantConditionGivenDocblockType>
-
-        <InvalidArgument>
-            <errorLevel type="suppress">
-                <file name="test/Factory/RenameUploadFilterFactoryTest.php"/>
-            </errorLevel>
-        </InvalidArgument>
-
-        <MixedArgumentTypeCoercion>
-            <errorLevel type="suppress">
-                <file name="src/Factory/UploadFileValidatorFactory.php"/>
-            </errorLevel>
-        </MixedArgumentTypeCoercion>
-
-        <UndefinedDocblockClass>
-            <errorLevel type="suppress">
-                <file name="src/Filter/RenameUpload.php"/>
-            </errorLevel>
-        </UndefinedDocblockClass>
-
-        <MoreSpecificImplementedParamType>
-            <errorLevel type="suppress">
-                <file name="src/Factory/UploadFileValidatorFactory.php"/>
-            </errorLevel>
-        </MoreSpecificImplementedParamType>
     </issueHandlers>
 
     <plugins>
