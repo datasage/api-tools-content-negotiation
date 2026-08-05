@@ -249,7 +249,6 @@ class ContentTypeListenerTest extends TestCase
 
         $r = new ReflectionObject($this->listener);
         $p = $r->getProperty('uploadTmpDir');
-        $p->setAccessible(true);
         $p->setValue($this->listener, $tmpDir);
 
         if (strpos(PHP_OS, 'Darwin') !== false) {

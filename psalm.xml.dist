@@ -18,18 +18,6 @@
     </projectFiles>
 
     <issueHandlers>
-        <InternalMethod>
-            <errorLevel type="suppress">
-                <referencedMethod name="PHPUnit\Framework\MockObject\Builder\InvocationMocker::method"/>
-            </errorLevel>
-            <errorLevel type="suppress">
-                <referencedMethod name="PHPUnit\Framework\MockObject\Builder\InvocationMocker::willReturn"/>
-            </errorLevel>
-            <errorLevel type="suppress">
-                <referencedMethod name="PHPUnit\Framework\MockObject\Builder\InvocationMocker::with"/>
-            </errorLevel>
-        </InternalMethod>
-
         <UndefinedInterfaceMethod>
             <errorLevel type="suppress">
                 <referencedMethod name="Laminas\Stdlib\RequestInterface::getHeaders"/>
@@ -42,23 +30,11 @@
             </errorLevel>
         </RedundantConditionGivenDocblockType>
 
-        <InvalidArgument>
-            <errorLevel type="suppress">
-                <file name="test/Factory/RenameUploadFilterFactoryTest.php"/>
-            </errorLevel>
-        </InvalidArgument>
-
         <MixedArgumentTypeCoercion>
             <errorLevel type="suppress">
                 <file name="src/Factory/UploadFileValidatorFactory.php"/>
             </errorLevel>
         </MixedArgumentTypeCoercion>
-
-        <UndefinedDocblockClass>
-            <errorLevel type="suppress">
-                <file name="src/Filter/RenameUpload.php"/>
-            </errorLevel>
-        </UndefinedDocblockClass>
 
         <MoreSpecificImplementedParamType>
             <errorLevel type="suppress">
