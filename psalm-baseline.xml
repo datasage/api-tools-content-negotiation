@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+<files psalm-version="6.16.1@f1f5de594dc76faf8784e02d3dc4716c91c6f6ac">
   <file src="config/module.config.php">
     <DeprecatedClass>
       <code><![CDATA[Factory\UploadFileValidatorFactory::class]]></code>
@@ -7,6 +7,12 @@
     </DeprecatedClass>
   </file>
   <file src="src/AcceptFilterListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptFilterListener]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function onRoute(MvcEvent $e)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$headers]]></code>
       <code><![CDATA[$headers]]></code>
@@ -31,6 +37,13 @@
     </UndefinedMethod>
   </file>
   <file src="src/AcceptListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptListener]]></code>
+    </ClassMustBeFinal>
+    <DeprecatedMethod>
+      <code><![CDATA[getOptions]]></code>
+      <code><![CDATA[setOptions]]></code>
+    </DeprecatedMethod>
     <DocblockTypeContradiction>
       <code><![CDATA[empty($criteria)]]></code>
     </DocblockTypeContradiction>
@@ -45,6 +58,7 @@
     </MixedArgument>
     <MixedArgumentTypeCoercion>
       <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result->getVariables()]]></code>
     </MixedArgumentTypeCoercion>
     <MixedAssignment>
       <code><![CDATA[$controllerName]]></code>
@@ -53,15 +67,9 @@
       <code><![CDATA[$criteria]]></code>
       <code><![CDATA[$fallbackConfig]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[array|null]]></code>
-    </MixedInferredReturnType>
     <MixedReturnStatement>
       <code><![CDATA[$criteria]]></code>
     </MixedReturnStatement>
-    <PossiblyInvalidArgument>
-      <code><![CDATA[$result->getVariables()]]></code>
-    </PossiblyInvalidArgument>
     <PossiblyNullArgument>
       <code><![CDATA[$fallbackConfig]]></code>
       <code><![CDATA[$fallbackConfig]]></code>
@@ -80,6 +88,9 @@
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/ContentNegotiationOptions.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentNegotiationOptions]]></code>
+    </ClassMustBeFinal>
     <DeprecatedMethod>
       <code><![CDATA[normalizeKey]]></code>
       <code><![CDATA[normalizeKey]]></code>
@@ -88,6 +99,11 @@
     <InvalidArgument>
       <code><![CDATA[$options]]></code>
     </InvalidArgument>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __get($key)]]></code>
+      <code><![CDATA[public function __set($key, $value)]]></code>
+      <code><![CDATA[public function setFromArray($options)]]></code>
+    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[ContentNegotiationOptions]]></code>
     </MissingTemplateParam>
@@ -110,8 +126,24 @@
     <PossiblyInvalidArgument>
       <code><![CDATA[$this->normalizeOptions($options)]]></code>
     </PossiblyInvalidArgument>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[getAcceptWhitelist]]></code>
+      <code><![CDATA[getContentTypeWhitelist]]></code>
+      <code><![CDATA[getControllers]]></code>
+      <code><![CDATA[getSelectors]]></code>
+      <code><![CDATA[getXHttpMethodOverrideEnabled]]></code>
+      <code><![CDATA[setAcceptWhitelist]]></code>
+      <code><![CDATA[setContentTypeWhitelist]]></code>
+      <code><![CDATA[setControllers]]></code>
+      <code><![CDATA[setHttpOverrideMethods]]></code>
+      <code><![CDATA[setSelectors]]></code>
+      <code><![CDATA[setXHttpMethodOverrideEnabled]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/ContentTypeFilterListener.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+    </MissingOverrideAttribute>
     <MixedArrayOffset>
       <code><![CDATA[$this->config[$controllerName]]]></code>
     </MixedArrayOffset>
@@ -131,6 +163,9 @@
     </PossiblyNullReference>
   </file>
   <file src="src/ContentTypeListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentTypeListener]]></code>
+    </ClassMustBeFinal>
     <InvalidCatch>
       <code><![CDATA[try {
                         $parser     = new MultipartContentParser($contentType, $request);
@@ -215,6 +250,9 @@
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/BodyParam.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[BodyParam]]></code>
+    </ClassMustBeFinal>
     <MixedAssignment>
       <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
@@ -232,12 +270,12 @@
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/BodyParams.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[BodyParams]]></code>
+    </ClassMustBeFinal>
     <MixedAssignment>
       <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[array|ArrayAccess]]></code>
-    </MixedInferredReturnType>
     <MixedMethodCall>
       <code><![CDATA[getPost]]></code>
     </MixedMethodCall>
@@ -255,6 +293,9 @@
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/QueryParam.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[QueryParam]]></code>
+    </ClassMustBeFinal>
     <MixedAssignment>
       <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
@@ -272,12 +313,12 @@
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/QueryParams.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[QueryParams]]></code>
+    </ClassMustBeFinal>
     <MixedAssignment>
       <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[array]]></code>
-    </MixedInferredReturnType>
     <MixedMethodCall>
       <code><![CDATA[getQuery]]></code>
       <code><![CDATA[toArray]]></code>
@@ -296,6 +337,9 @@
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ControllerPlugin/RouteParam.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RouteParam]]></code>
+    </ClassMustBeFinal>
     <MixedAssignment>
       <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
@@ -310,12 +354,12 @@
     </PossiblyUndefinedMethod>
   </file>
   <file src="src/ControllerPlugin/RouteParams.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RouteParams]]></code>
+    </ClassMustBeFinal>
     <MixedAssignment>
       <code><![CDATA[$parameterData]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[array]]></code>
-    </MixedInferredReturnType>
     <MixedMethodCall>
       <code><![CDATA[getParams]]></code>
     </MixedMethodCall>
@@ -326,7 +370,25 @@
       <code><![CDATA[getRouteMatch]]></code>
     </PossiblyUndefinedMethod>
   </file>
+  <file src="src/Exception/InvalidContentStreamException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvalidContentStreamException]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="src/Exception/InvalidJsonException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvalidJsonException]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="src/Exception/InvalidMultipartContentException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvalidMultipartContentException]]></code>
+    </ClassMustBeFinal>
+  </file>
   <file src="src/Factory/AcceptFilterListenerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptFilterListenerFactory]]></code>
+    </ClassMustBeFinal>
     <MixedArgument>
       <code><![CDATA[$options->getAcceptWhitelist()]]></code>
     </MixedArgument>
@@ -338,15 +400,15 @@
     </MixedMethodCall>
   </file>
   <file src="src/Factory/AcceptListenerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptListenerFactory]]></code>
+    </ClassMustBeFinal>
     <MixedArgument>
       <code><![CDATA[$container->get(ContentNegotiationOptions::class)->toArray()]]></code>
     </MixedArgument>
     <MixedAssignment>
       <code><![CDATA[$plugins]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[AcceptableViewModelSelector]]></code>
-    </MixedInferredReturnType>
     <MixedMethodCall>
       <code><![CDATA[get]]></code>
       <code><![CDATA[has]]></code>
@@ -357,9 +419,9 @@
     </MixedReturnStatement>
   </file>
   <file src="src/Factory/ContentNegotiationOptionsFactory.php">
-    <MixedInferredReturnType>
-      <code><![CDATA[array]]></code>
-    </MixedInferredReturnType>
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentNegotiationOptionsFactory]]></code>
+    </ClassMustBeFinal>
     <MixedReturnStatement>
       <code><![CDATA[$config['api-tools-content-negotiation']]]></code>
       <code><![CDATA[$config['api-tools-content-negotiation']]]></code>
@@ -369,6 +431,9 @@
     </PossiblyInvalidArgument>
   </file>
   <file src="src/Factory/ContentTypeFilterListenerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentTypeFilterListenerFactory]]></code>
+    </ClassMustBeFinal>
     <MixedArgument>
       <code><![CDATA[$options->getContentTypeWhitelist()]]></code>
     </MixedArgument>
@@ -380,6 +445,9 @@
     </MixedMethodCall>
   </file>
   <file src="src/Factory/HttpMethodOverrideListenerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[HttpMethodOverrideListenerFactory]]></code>
+    </ClassMustBeFinal>
     <MixedArgument>
       <code><![CDATA[$httpOverrideMethods]]></code>
     </MixedArgument>
@@ -392,6 +460,9 @@
     </MixedMethodCall>
   </file>
   <file src="src/Factory/RenameUploadFilterFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RenameUploadFilterFactory]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[RenameUpload]]></code>
       <code><![CDATA[RenameUpload]]></code>
@@ -404,6 +475,10 @@
     <DeprecatedMethod>
       <code><![CDATA[getServiceLocator]]></code>
     </DeprecatedMethod>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
+      <code><![CDATA[public function createService(ServiceLocatorInterface $container, $name = null, $requestedName = null)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$container->get('Request')]]></code>
     </MixedArgument>
@@ -413,6 +488,9 @@
     <PossiblyNullArgument>
       <code><![CDATA[$options]]></code>
     </PossiblyNullArgument>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[setCreationOptions]]></code>
+    </PossiblyUnusedMethod>
     <RedundantConditionGivenDocblockType>
       <code><![CDATA[$container->getServiceLocator()]]></code>
     </RedundantConditionGivenDocblockType>
@@ -421,6 +499,9 @@
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Factory/UploadFileValidatorFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UploadFileValidatorFactory]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[UploadFile]]></code>
       <code><![CDATA[UploadFile]]></code>
@@ -434,12 +515,19 @@
       <code><![CDATA[getServiceLocator]]></code>
       <code><![CDATA[getServiceLocator]]></code>
     </DeprecatedMethod>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
+      <code><![CDATA[public function createService(ServiceLocatorInterface $container, $name = null, $requestedName = null)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$container->get('Request')]]></code>
     </MixedArgument>
     <ParamNameMismatch>
       <code><![CDATA[$container]]></code>
     </ParamNameMismatch>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[setCreationOptions]]></code>
+    </PossiblyUnusedMethod>
     <RedundantConditionGivenDocblockType>
       <code><![CDATA[$container->getServiceLocator()]]></code>
       <code><![CDATA[$container->getServiceLocator()]]></code>
@@ -449,21 +537,32 @@
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Filter/RenameUpload.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RenameUpload]]></code>
+    </ClassMustBeFinal>
+    <DeprecatedMethod>
+      <code><![CDATA[parent::moveUploadedFile($sourceFile, $targetFile)]]></code>
+    </DeprecatedMethod>
     <DocblockTypeContradiction>
       <code><![CDATA[null === $this->request]]></code>
     </DocblockTypeContradiction>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function moveUploadedFile($sourceFile, $targetFile)]]></code>
+    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[RenameUpload]]></code>
     </MissingTemplateParam>
     <PropertyNotSetInConstructor>
       <code><![CDATA[$request]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedClass>
-      <code><![CDATA[RenameUpload]]></code>
-      <code><![CDATA[RenameUpload]]></code>
-    </UndefinedClass>
   </file>
   <file src="src/HttpMethodOverrideListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[HttpMethodOverrideListener]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$allowedMethods]]></code>
       <code><![CDATA[$overrideMethod]]></code>
@@ -483,6 +582,12 @@
     </PossiblyUndefinedMethod>
   </file>
   <file src="src/JsonModel.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[JsonModel]]></code>
+    </ClassMustBeFinal>
+    <DeprecatedClass>
+      <code><![CDATA[BaseJsonModel]]></code>
+    </DeprecatedClass>
     <DeprecatedMethod>
       <code><![CDATA[entity]]></code>
     </DeprecatedMethod>
@@ -493,13 +598,26 @@
       <code><![CDATA[$variables]]></code>
       <code><![CDATA[$variables]]></code>
     </ImplementedParamTypeMismatch>
+    <InaccessibleProperty>
+      <code><![CDATA[$variables->entity]]></code>
+    </InaccessibleProperty>
+    <InvalidExtendClass>
+      <code><![CDATA[BaseJsonModel]]></code>
+    </InvalidExtendClass>
+    <MethodSignatureMismatch>
+      <code><![CDATA[public function serialize()]]></code>
+      <code><![CDATA[public function setTerminal($flag)]]></code>
+      <code><![CDATA[public function setVariables($variables, $overwrite = false)]]></code>
+    </MethodSignatureMismatch>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function serialize()]]></code>
+      <code><![CDATA[public function setTerminal($flag)]]></code>
+      <code><![CDATA[public function setVariables($variables, $overwrite = false)]]></code>
+    </MissingOverrideAttribute>
     <MixedAssignment>
       <code><![CDATA[$variables]]></code>
       <code><![CDATA[$variables]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[self]]></code>
-    </MixedInferredReturnType>
     <ParamNameMismatch>
       <code><![CDATA[$flag]]></code>
       <code><![CDATA[$flag]]></code>
@@ -509,6 +627,9 @@
     </UndefinedDocblockClass>
   </file>
   <file src="src/Module.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Module]]></code>
+    </ClassMustBeFinal>
     <MixedArgument>
       <code><![CDATA[$services->get(AcceptListener::class)]]></code>
       <code><![CDATA[$services->get(ContentTypeListener::class)]]></code>
@@ -525,8 +646,14 @@
     <PossiblyNullReference>
       <code><![CDATA[attach]]></code>
     </PossiblyNullReference>
+    <UnusedClass>
+      <code><![CDATA[Module]]></code>
+    </UnusedClass>
   </file>
   <file src="src/MultipartContentParser.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[MultipartContentParser]]></code>
+    </ClassMustBeFinal>
     <MixedArgument>
       <code><![CDATA[$headers['CONTENT-DISPOSITION']]]></code>
       <code><![CDATA[$headers['CONTENT-DISPOSITION']]]></code>
@@ -534,15 +661,19 @@
       <code><![CDATA[$lastline]]></code>
       <code><![CDATA[$this->request->getContent()]]></code>
     </MixedArgument>
-    <MixedInferredReturnType>
-      <code><![CDATA[string]]></code>
-    </MixedInferredReturnType>
     <MixedReturnStatement>
       <code><![CDATA[$headers['CONTENT-TYPE']]]></code>
     </MixedReturnStatement>
     <PossiblyFalseArgument>
+      <code><![CDATA[$file['tmp_name']]]></code>
+      <code><![CDATA[$file['tmp_name']]]></code>
+      <code><![CDATA[$file['tmp_name']]]></code>
+      <code><![CDATA[$finfo]]></code>
       <code><![CDATA[$name]]></code>
       <code><![CDATA[$name]]></code>
+      <code><![CDATA[$stream]]></code>
+      <code><![CDATA[$stream]]></code>
+      <code><![CDATA[$stream]]></code>
     </PossiblyFalseArgument>
     <PossiblyInvalidArgument>
       <code><![CDATA[$tmpFile]]></code>
@@ -572,12 +703,35 @@
       <code><![CDATA[empty($tmpDir)]]></code>
     </RiskyTruthyFalsyComparison>
   </file>
+  <file src="src/ParameterDataContainer.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ParameterDataContainer]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[hasBodyParam]]></code>
+      <code><![CDATA[hasQueryParam]]></code>
+      <code><![CDATA[hasRouteParam]]></code>
+      <code><![CDATA[setBodyParam]]></code>
+      <code><![CDATA[setQueryParam]]></code>
+      <code><![CDATA[setRouteParam]]></code>
+    </PossiblyUnusedMethod>
+  </file>
   <file src="src/Request.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Request]]></code>
+    </ClassMustBeFinal>
     <DocblockTypeContradiction>
       <code><![CDATA[! is_string($stream)
             && ! is_resource($stream)]]></code>
       <code><![CDATA[is_resource($this->contentStream)]]></code>
     </DocblockTypeContradiction>
+    <FalsableReturnStatement>
+      <code><![CDATA[$this->contentStream]]></code>
+      <code><![CDATA[fopen($this->contentStream, 'r')]]></code>
+    </FalsableReturnStatement>
+    <InvalidFalsableReturnType>
+      <code><![CDATA[resource]]></code>
+    </InvalidFalsableReturnType>
     <InvalidPropertyAssignmentValue>
       <code><![CDATA[fopen('php://temp', 'r+')]]></code>
     </InvalidPropertyAssignmentValue>
@@ -588,6 +742,10 @@
       <code><![CDATA[$this->contentStream]]></code>
       <code><![CDATA[return $this->contentStream;]]></code>
     </NoValue>
+    <PossiblyFalseArgument>
+      <code><![CDATA[$this->contentStream]]></code>
+      <code><![CDATA[$this->contentStream]]></code>
+    </PossiblyFalseArgument>
     <PossiblyInvalidPropertyAssignmentValue>
       <code><![CDATA[$stream]]></code>
     </PossiblyInvalidPropertyAssignmentValue>
@@ -601,6 +759,9 @@
     </PropertyNotSetInConstructor>
   </file>
   <file src="src/Validator/UploadFile.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UploadFile]]></code>
+    </ClassMustBeFinal>
     <DeprecatedProperty>
       <code><![CDATA[$this->abstractOptions]]></code>
       <code><![CDATA[$this->abstractOptions]]></code>
@@ -612,6 +773,9 @@
     <MethodSignatureMismatch>
       <code><![CDATA[public function isValid($value)]]></code>
     </MethodSignatureMismatch>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function isValid($value)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$value]]></code>
       <code><![CDATA[$value]]></code>
@@ -620,15 +784,45 @@
       <code><![CDATA[$this->abstractOptions['messages'][static::ATTACK]]]></code>
     </MixedArrayOffset>
   </file>
+  <file src="src/ViewModel.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ViewModel]]></code>
+    </ClassMustBeFinal>
+    <InvalidExtendClass>
+      <code><![CDATA[BaseViewModel]]></code>
+    </InvalidExtendClass>
+  </file>
   <file src="test/AcceptFilterListenerTest.php">
-    <UnusedMethodCall>
-      <code><![CDATA[setAccessible]]></code>
-    </UnusedMethodCall>
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptFilterListenerTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
+    <MixedMethodCall>
+      <code><![CDATA[willReturn]]></code>
+    </MixedMethodCall>
+    <UndefinedMagicMethod>
+      <code><![CDATA[has]]></code>
+    </UndefinedMagicMethod>
   </file>
   <file src="test/AcceptListenerTest.php">
     <ArgumentTypeCoercion>
       <code><![CDATA[$this->event->getRequest()]]></code>
     </ArgumentTypeCoercion>
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptListenerTest]]></code>
+    </ClassMustBeFinal>
+    <DeprecatedClass>
+      <code><![CDATA[JsonModel::class]]></code>
+    </DeprecatedClass>
+    <InaccessibleProperty>
+      <code><![CDATA[$response->getApiProblem()->detail]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+    </InaccessibleProperty>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$response->getApiProblem()->detail]]></code>
     </MixedArgument>
@@ -638,7 +832,21 @@
         ])]]></code>
     </PossiblyInvalidArgument>
   </file>
+  <file src="test/ContentNegotiationOptionsTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentNegotiationOptionsTest]]></code>
+    </ClassMustBeFinal>
+  </file>
   <file src="test/ContentTypeFilterListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentTypeFilterListenerTest]]></code>
+    </ClassMustBeFinal>
+    <InaccessibleProperty>
+      <code><![CDATA[$response->getApiProblem()->detail]]></code>
+    </InaccessibleProperty>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$response->getApiProblem()->detail]]></code>
     </MixedArgument>
@@ -654,9 +862,21 @@
     </PossiblyInvalidArgument>
   </file>
   <file src="test/ContentTypeListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentTypeListenerTest]]></code>
+    </ClassMustBeFinal>
+    <InaccessibleProperty>
+      <code><![CDATA[$problem->detail]]></code>
+      <code><![CDATA[$problem->detail]]></code>
+      <code><![CDATA[$problem->status]]></code>
+      <code><![CDATA[$problem->status]]></code>
+    </InaccessibleProperty>
     <InvalidDocblock>
       <code><![CDATA[public static function multipartFormDataMethods(): array]]></code>
     </InvalidDocblock>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$details['detail']]]></code>
       <code><![CDATA[$file['tmp_name']]]></code>
@@ -702,6 +922,21 @@
     <MixedReturnStatement>
       <code><![CDATA[array]]></code>
     </MixedReturnStatement>
+    <PossiblyFalseArgument>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[$tmpFile]]></code>
+    </PossiblyFalseArgument>
+    <PossiblyFalseOperand>
+      <code><![CDATA[$tmpFile]]></code>
+      <code><![CDATA[realpath(__DIR__ . '/TestAsset/multipart-form-data.txt')]]></code>
+    </PossiblyFalseOperand>
     <PossiblyInvalidArgument>
       <code><![CDATA[$this->createRouteMatch([])]]></code>
       <code><![CDATA[$this->createRouteMatch([])]]></code>
@@ -752,21 +987,27 @@
       <code><![CDATA[addHeaderLine]]></code>
       <code><![CDATA[addHeaderLine]]></code>
     </PossiblyUndefinedMethod>
-    <UnusedMethodCall>
-      <code><![CDATA[setAccessible]]></code>
-    </UnusedMethodCall>
   </file>
   <file src="test/Factory/AcceptFilterListenerFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptFilterListenerFactoryTest]]></code>
+    </ClassMustBeFinal>
     <TooManyArguments>
       <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
   <file src="test/Factory/AcceptListenerFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptListenerFactoryTest]]></code>
+    </ClassMustBeFinal>
     <TooManyArguments>
       <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
   <file src="test/Factory/ContentNegotiationOptionsFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentNegotiationOptionsFactoryTest]]></code>
+    </ClassMustBeFinal>
     <TooManyArguments>
       <code><![CDATA[$factory]]></code>
       <code><![CDATA[$factory]]></code>
@@ -774,33 +1015,74 @@
     </TooManyArguments>
   </file>
   <file src="test/Factory/ContentTypeFilterListenerFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentTypeFilterListenerFactoryTest]]></code>
+    </ClassMustBeFinal>
     <TooManyArguments>
       <code><![CDATA[$factory]]></code>
     </TooManyArguments>
   </file>
   <file src="test/Factory/HttpMethodOverrideListenerFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[HttpMethodOverrideListenerFactoryTest]]></code>
+    </ClassMustBeFinal>
+    <InvalidMethodCall>
+      <code><![CDATA[willReturn]]></code>
+    </InvalidMethodCall>
     <MixedArgument>
       <code><![CDATA[$container->reveal()]]></code>
     </MixedArgument>
     <MixedMethodCall>
       <code><![CDATA[willReturn]]></code>
     </MixedMethodCall>
-    <PossiblyInvalidMethodCall>
-      <code><![CDATA[willReturn]]></code>
-    </PossiblyInvalidMethodCall>
     <PossiblyUndefinedMethod>
       <code><![CDATA[reveal]]></code>
     </PossiblyUndefinedMethod>
     <TooManyArguments>
       <code><![CDATA[$factory]]></code>
     </TooManyArguments>
+    <UndefinedMagicMethod>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[getHttpOverrideMethods]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="test/Factory/RenameUploadFilterFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RenameUploadFilterFactoryTest]]></code>
+    </ClassMustBeFinal>
+    <DeprecatedMethod>
+      <code><![CDATA[getTarget]]></code>
+      <code><![CDATA[getTarget]]></code>
+    </DeprecatedMethod>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
   </file>
   <file src="test/Filter/RenameUploadTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RenameUploadTest]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[new RenameUpload($target)]]></code>
     </DeprecatedClass>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+      <code><![CDATA[protected function tearDown(): void]]></code>
+    </MissingOverrideAttribute>
   </file>
   <file src="test/HttpMethodOverrideListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[HttpMethodOverrideListenerTest]]></code>
+    </ClassMustBeFinal>
+    <InaccessibleProperty>
+      <code><![CDATA[$problem->detail]]></code>
+      <code><![CDATA[$problem->detail]]></code>
+      <code><![CDATA[$problem->status]]></code>
+      <code><![CDATA[$problem->status]]></code>
+    </InaccessibleProperty>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$problem->detail]]></code>
       <code><![CDATA[$problem->detail]]></code>
@@ -820,6 +1102,9 @@
     </PossiblyUndefinedMethod>
   </file>
   <file src="test/JsonModelTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[JsonModelTest]]></code>
+    </ClassMustBeFinal>
     <InvalidArgument>
       <code><![CDATA[new TestAsset\ModelWithJson()]]></code>
     </InvalidArgument>
@@ -829,10 +1114,16 @@
     </MixedAssignment>
   </file>
   <file src="test/RequestTest.php">
-    <UnusedMethodCall>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-    </UnusedMethodCall>
+    <ClassMustBeFinal>
+      <code><![CDATA[RequestTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyFalseOperand>
+      <code><![CDATA[realpath(__FILE__)]]></code>
+      <code><![CDATA[realpath(__FILE__)]]></code>
+    </PossiblyFalseOperand>
   </file>
   <file src="test/RouteMatchFactoryTrait.php">
     <UndefinedDocblockClass>
@@ -840,9 +1131,15 @@
     </UndefinedDocblockClass>
   </file>
   <file src="test/Validator/UploadFileTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UploadFileTest]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[UploadFile]]></code>
       <code><![CDATA[new UploadFile()]]></code>
     </DeprecatedClass>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
   </file>
 </files>

@@ -31,7 +31,6 @@ class AcceptFilterListenerTest extends TestCase
         $headers->has('accept')->willReturn(false);
 
         $r = new ReflectionMethod($this->listener, 'validateMediaType');
-        $r->setAccessible(true);
 
         $this->assertTrue($r->invoke($this->listener, 'application/json', $headers->reveal()));
     }

@@ -66,7 +66,6 @@ class RequestTest extends TestCase
     {
         $r = new ReflectionObject($this->request);
         $p = $r->getProperty('content');
-        $p->setAccessible(true);
         $p->setValue($this->request, 'bam!');
 
         $stream = $this->request->getContentAsStream();
@@ -75,9 +74,6 @@ class RequestTest extends TestCase
 
     private function getContentStreamReflectionProperty(): ReflectionProperty
     {
-        $property = new ReflectionProperty(Request::class, 'contentStream');
-        $property->setAccessible(true);
-
-        return $property;
+        return new ReflectionProperty(Request::class, 'contentStream');
     }
 }
