@@ -6,6 +6,8 @@ namespace LaminasTest\ApiTools\ContentNegotiation\Validator;
 
 use Laminas\ApiTools\ContentNegotiation\Validator\UploadFile;
 use Laminas\Http\Request as HttpRequest;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 use function basename;
@@ -20,6 +22,7 @@ class UploadFileTest extends TestCase
     /** @var UploadFile */
     protected $validator;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->validator = new UploadFile();
@@ -34,9 +37,7 @@ class UploadFileTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider uploadMethods
-     */
+    #[DataProvider('uploadMethods')]
     public function testDoesNotMarkUploadFileAsInvalidForPutAndPatchHttpRequests(string $method): void
     {
         $request = new HttpRequest();

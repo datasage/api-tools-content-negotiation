@@ -10,6 +10,7 @@ use Laminas\EventManager\AbstractListenerAggregate;
 use Laminas\EventManager\EventManagerInterface;
 use Laminas\Http\Request as HttpRequest;
 use Laminas\Mvc\MvcEvent;
+use Override;
 
 use function array_key_exists;
 use function in_array;
@@ -31,6 +32,7 @@ class HttpMethodOverrideListener extends AbstractListenerAggregate
      *
      * @param int                   $priority
      */
+    #[Override]
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(MvcEvent::EVENT_ROUTE, [$this, 'onRoute'], -40);

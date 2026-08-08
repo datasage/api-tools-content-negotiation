@@ -13,6 +13,9 @@ use Laminas\EventManager\EventManagerInterface;
 use Laminas\Http\Request;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Stdlib\Parameters;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 use ReflectionObject;
 
@@ -42,6 +45,7 @@ class ContentTypeListenerTest extends TestCase
     /** @var ContentTypeListener */
     protected $listener;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->listener = new ContentTypeListener();
@@ -58,10 +62,8 @@ class ContentTypeListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @group 3
-     * @dataProvider methodsWithBodies
-     */
+    #[Group('3')]
+    #[DataProvider('methodsWithBodies')]
     public function testJsonDecodeErrorsReturnsProblemResponse(string $method): void
     {
         $listener = $this->listener;
@@ -82,10 +84,8 @@ class ContentTypeListenerTest extends TestCase
         $this->assertStringContainsString('JSON decoding', $problem->detail);
     }
 
-    /**
-     * @group 3
-     * @dataProvider methodsWithBodies
-     */
+    #[Group('3')]
+    #[DataProvider('methodsWithBodies')]
     public function testJsonDecodeStringErrorsReturnsProblemResponse(string $method): void
     {
         $listener = $this->listener;
@@ -116,9 +116,7 @@ class ContentTypeListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider multipartFormDataMethods
-     */
+    #[DataProvider('multipartFormDataMethods')]
     public function testCanDecodeMultipartFormDataRequestsForPutPatchAndDeleteOperations(string $method): void
     {
         $request = new Request();
@@ -156,9 +154,7 @@ class ContentTypeListenerTest extends TestCase
         $this->assertTrue(file_exists($file['tmp_name']));
     }
 
-    /**
-     * @dataProvider multipartFormDataMethods
-     */
+    #[DataProvider('multipartFormDataMethods')]
     public function testCanDecodeMultipartFormDataRequestsFromStreamsForPutAndPatchOperations(string $method): void
     {
         $request = new ContentNegotiationRequest();
@@ -311,10 +307,8 @@ class ContentTypeListenerTest extends TestCase
         rmdir($tmpDir);
     }
 
-    /**
-     * @group 35
-     * @dataProvider methodsWithBodies
-     */
+    #[Group('35')]
+    #[DataProvider('methodsWithBodies')]
     public function testWillNotAttemptToInjectNullValueForBodyParams(string $method): void
     {
         $listener = $this->listener;
@@ -355,9 +349,9 @@ class ContentTypeListenerTest extends TestCase
 
     /**
      * @param mixed $content
-     * @group 36
-     * @dataProvider methodsWithBlankBodies
      */
+    #[Group('36')]
+    #[DataProvider('methodsWithBlankBodies')]
     public function testWillNotAttemptToInjectNullValueForBodyParamsWhenContentIsWhitespace(
         string $method,
         string $content
@@ -400,9 +394,9 @@ class ContentTypeListenerTest extends TestCase
 
     /**
      * @param mixed $content
-     * @group 36
-     * @dataProvider methodsWithLeadingWhitespace
      */
+    #[Group('36')]
+    #[DataProvider('methodsWithLeadingWhitespace')]
     public function testWillHandleJsonContentWithLeadingWhitespace(string $method, string $content): void
     {
         $listener = $this->listener;
@@ -443,9 +437,9 @@ class ContentTypeListenerTest extends TestCase
 
     /**
      * @param mixed $content
-     * @group 36
-     * @dataProvider methodsWithTrailingWhitespace
      */
+    #[Group('36')]
+    #[DataProvider('methodsWithTrailingWhitespace')]
     public function testWillHandleJsonContentWithTrailingWhitespace(string $method, string $content): void
     {
         $listener = $this->listener;
@@ -486,9 +480,9 @@ class ContentTypeListenerTest extends TestCase
 
     /**
      * @param mixed $content
-     * @group 36
-     * @dataProvider methodsWithLeadingAndTrailingWhitespace
      */
+    #[Group('36')]
+    #[DataProvider('methodsWithLeadingAndTrailingWhitespace')]
     public function testWillHandleJsonContentWithLeadingAndTrailingWhitespace(string $method, string $content): void
     {
         $listener = $this->listener;
@@ -521,8 +515,8 @@ class ContentTypeListenerTest extends TestCase
 
     /**
      * @param mixed $content
-     * @dataProvider methodsWithWhitespaceInsideBody
      */
+    #[DataProvider('methodsWithWhitespaceInsideBody')]
     public function testWillNotRemoveWhitespaceInsideBody(string $method, string $content): void
     {
         $listener = $this->listener;
@@ -542,9 +536,7 @@ class ContentTypeListenerTest extends TestCase
         $this->assertEquals(['foo' => 'bar foo'], $params->getBodyParams());
     }
 
-    /**
-     * @group 42
-     */
+    #[Group('42')]
     public function testReturns400ResponseWhenBodyPartIsMissingName(): void
     {
         $request = new Request();
@@ -598,10 +590,8 @@ class ContentTypeListenerTest extends TestCase
         ], $params);
     }
 
-    /**
-     * @group 50
-     * @dataProvider methodsWithBodies
-     */
+    #[Group('50')]
+    #[DataProvider('methodsWithBodies')]
     public function testMergesHalEmbeddedPropertiesIntoTopLevelObjectWhenDecodingHalJson(string $method): void
     {
         $data = [
@@ -656,9 +646,9 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /**
-     * @dataProvider methodsWithStringContent
      * @param string|int $key
      */
+    #[DataProvider('methodsWithStringContent')]
     public function testStringContentIsParsedCorrectlyToAnArray(string $method, string $data, $key): void
     {
         $listener = $this->listener;
@@ -713,9 +703,9 @@ class ContentTypeListenerTest extends TestCase
      * @see https://github.com/zfcampus/zf-content-negotiation/pull/94
      * @see https://github.com/zfcampus/zf-content-negotiation/pull/96
      *
-     * @dataProvider nonPostMethodsContent
      * @param array|object $expected Expected body params
      */
+    #[DataProvider('nonPostMethodsContent')]
     public function testMissingContentTypeHeaderResultsInParsingAsJsonIfInitialCharacterIndicatesObjectOrArray(
         string $method,
         string $data,

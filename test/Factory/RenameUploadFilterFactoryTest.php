@@ -8,6 +8,7 @@ use Laminas\ApiTools\ContentNegotiation\Factory\RenameUploadFilterFactory;
 use Laminas\Filter\File\RenameUpload;
 use Laminas\Filter\FilterPluginManager;
 use Laminas\ServiceManager\ServiceManager;
+use Override;
 use PHPUnit\Framework\TestCase;
 
 class RenameUploadFilterFactoryTest extends TestCase
@@ -15,6 +16,7 @@ class RenameUploadFilterFactoryTest extends TestCase
     /** @var FilterPluginManager */
     protected $filters;
 
+    #[Override]
     protected function setUp(): void
     {
         $config        = [

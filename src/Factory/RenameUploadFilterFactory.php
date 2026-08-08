@@ -9,6 +9,7 @@ use Laminas\ApiTools\ContentNegotiation\Filter\RenameUpload;
 use Laminas\ServiceManager\AbstractPluginManager;
 use Laminas\ServiceManager\FactoryInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;
+use Override;
 
 class RenameUploadFilterFactory implements FactoryInterface
 {
@@ -24,6 +25,7 @@ class RenameUploadFilterFactory implements FactoryInterface
      * @param null|array $options
      * @return RenameUpload
      */
+    #[Override]
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         $filter = new RenameUpload($options);
@@ -42,6 +44,7 @@ class RenameUploadFilterFactory implements FactoryInterface
      * @param null|string $requestedName
      * @return RenameUpload
      */
+    #[Override]
     public function createService(ServiceLocatorInterface $container, $name = null, $requestedName = null)
     {
         $requestedName = $requestedName ?: RenameUpload::class;

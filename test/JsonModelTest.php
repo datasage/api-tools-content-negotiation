@@ -10,6 +10,7 @@ use Laminas\ApiTools\ContentNegotiation\Exception\InvalidJsonException;
 use Laminas\ApiTools\ContentNegotiation\JsonModel;
 use Laminas\ApiTools\Hal\Collection as HalCollection;
 use Laminas\ApiTools\Hal\Entity as HalEntity;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function json_decode;
@@ -69,9 +70,7 @@ class JsonModelTest extends TestCase
         $jsonModel->serialize();
     }
 
-    /**
-     * @group 17
-     */
+    #[Group('17')]
     public function testCanSerializeTraversables(): void
     {
         $variables = [

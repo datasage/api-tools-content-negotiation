@@ -8,6 +8,8 @@ use Laminas\ApiTools\ApiProblem\ApiProblemResponse;
 use Laminas\ApiTools\ContentNegotiation\HttpMethodOverrideListener;
 use Laminas\Http\Request as HttpRequest;
 use Laminas\Mvc\MvcEvent;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 use function sprintf;
@@ -34,6 +36,7 @@ class HttpMethodOverrideListenerTest extends TestCase
     /**
      * Set up test
      */
+    #[Override]
     protected function setUp(): void
     {
         $this->listener = new HttpMethodOverrideListener($this->httpMethodOverride);
@@ -51,9 +54,7 @@ class HttpMethodOverrideListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider httpMethods
-     */
+    #[DataProvider('httpMethods')]
     public function testHttpMethodOverrideListener(string $method): void
     {
         $listener = $this->listener;
@@ -70,9 +71,7 @@ class HttpMethodOverrideListenerTest extends TestCase
         $this->assertEquals($method, $request->getMethod());
     }
 
-    /**
-     * @dataProvider httpMethods
-     */
+    #[DataProvider('httpMethods')]
     public function testHttpMethodOverrideListenerReturnsProblemResponseForMethodNotInConfig(string $method): void
     {
         $listener = $this->listener;
@@ -94,9 +93,7 @@ class HttpMethodOverrideListenerTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider httpMethods
-     */
+    #[DataProvider('httpMethods')]
     public function testHttpMethodOverrideListenerReturnsProblemResponseForIllegalOverrideValue(string $method): void
     {
         $listener = $this->listener;

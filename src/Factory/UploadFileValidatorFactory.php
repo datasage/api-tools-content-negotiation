@@ -9,6 +9,7 @@ use Laminas\ApiTools\ContentNegotiation\Validator\UploadFile;
 use Laminas\ServiceManager\AbstractPluginManager;
 use Laminas\ServiceManager\FactoryInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;
+use Override;
 
 use function method_exists;
 
@@ -29,6 +30,7 @@ class UploadFileValidatorFactory implements FactoryInterface
      * @param array<string, mixed>|null $options
      * @return UploadFile
      */
+    #[Override]
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         if (
@@ -52,6 +54,7 @@ class UploadFileValidatorFactory implements FactoryInterface
      * @param null|string $requestedName
      * @return UploadFile
      */
+    #[Override]
     public function createService(ServiceLocatorInterface $container, $name = null, $requestedName = null)
     {
         $requestedName = $requestedName ?: UploadFile::class;

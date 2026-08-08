@@ -10,9 +10,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[AcceptFilterListener]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function onRoute(MvcEvent $e)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$headers]]></code>
       <code><![CDATA[$headers]]></code>
@@ -99,11 +96,6 @@
     <InvalidArgument>
       <code><![CDATA[$options]]></code>
     </InvalidArgument>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __get($key)]]></code>
-      <code><![CDATA[public function __set($key, $value)]]></code>
-      <code><![CDATA[public function setFromArray($options)]]></code>
-    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[ContentNegotiationOptions]]></code>
     </MissingTemplateParam>
@@ -141,9 +133,6 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/ContentTypeFilterListener.php">
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
-    </MissingOverrideAttribute>
     <MixedArrayOffset>
       <code><![CDATA[$this->config[$controllerName]]]></code>
     </MixedArrayOffset>
@@ -475,10 +464,6 @@
     <DeprecatedMethod>
       <code><![CDATA[getServiceLocator]]></code>
     </DeprecatedMethod>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
-      <code><![CDATA[public function createService(ServiceLocatorInterface $container, $name = null, $requestedName = null)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$container->get('Request')]]></code>
     </MixedArgument>
@@ -515,10 +500,6 @@
       <code><![CDATA[getServiceLocator]]></code>
       <code><![CDATA[getServiceLocator]]></code>
     </DeprecatedMethod>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
-      <code><![CDATA[public function createService(ServiceLocatorInterface $container, $name = null, $requestedName = null)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$container->get('Request')]]></code>
     </MixedArgument>
@@ -546,9 +527,6 @@
     <DocblockTypeContradiction>
       <code><![CDATA[null === $this->request]]></code>
     </DocblockTypeContradiction>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function moveUploadedFile($sourceFile, $targetFile)]]></code>
-    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[RenameUpload]]></code>
     </MissingTemplateParam>
@@ -560,9 +538,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[HttpMethodOverrideListener]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$allowedMethods]]></code>
       <code><![CDATA[$overrideMethod]]></code>
@@ -605,15 +580,10 @@
       <code><![CDATA[BaseJsonModel]]></code>
     </InvalidExtendClass>
     <MethodSignatureMismatch>
-      <code><![CDATA[public function serialize()]]></code>
-      <code><![CDATA[public function setTerminal($flag)]]></code>
-      <code><![CDATA[public function setVariables($variables, $overwrite = false)]]></code>
+      <code><![CDATA[#[Override]]]></code>
+      <code><![CDATA[#[Override]]]></code>
+      <code><![CDATA[#[Override]]]></code>
     </MethodSignatureMismatch>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function serialize()]]></code>
-      <code><![CDATA[public function setTerminal($flag)]]></code>
-      <code><![CDATA[public function setVariables($variables, $overwrite = false)]]></code>
-    </MissingOverrideAttribute>
     <MixedAssignment>
       <code><![CDATA[$variables]]></code>
       <code><![CDATA[$variables]]></code>
@@ -771,11 +741,8 @@
       <code><![CDATA[BaseValidator]]></code>
     </InvalidExtendClass>
     <MethodSignatureMismatch>
-      <code><![CDATA[public function isValid($value)]]></code>
+      <code><![CDATA[#[Override]]]></code>
     </MethodSignatureMismatch>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function isValid($value)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$value]]></code>
       <code><![CDATA[$value]]></code>
@@ -796,9 +763,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[AcceptFilterListenerTest]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedMethodCall>
       <code><![CDATA[willReturn]]></code>
     </MixedMethodCall>
@@ -820,9 +784,6 @@
       <code><![CDATA[$response->getApiProblem()->detail]]></code>
       <code><![CDATA[$response->getApiProblem()->status]]></code>
     </InaccessibleProperty>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$response->getApiProblem()->detail]]></code>
     </MixedArgument>
@@ -844,9 +805,6 @@
     <InaccessibleProperty>
       <code><![CDATA[$response->getApiProblem()->detail]]></code>
     </InaccessibleProperty>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$response->getApiProblem()->detail]]></code>
     </MixedArgument>
@@ -874,9 +832,6 @@
     <InvalidDocblock>
       <code><![CDATA[public static function multipartFormDataMethods(): array]]></code>
     </InvalidDocblock>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$details['detail']]]></code>
       <code><![CDATA[$file['tmp_name']]]></code>
@@ -1054,9 +1009,6 @@
       <code><![CDATA[getTarget]]></code>
       <code><![CDATA[getTarget]]></code>
     </DeprecatedMethod>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
   </file>
   <file src="test/Filter/RenameUploadTest.php">
     <ClassMustBeFinal>
@@ -1065,10 +1017,6 @@
     <DeprecatedClass>
       <code><![CDATA[new RenameUpload($target)]]></code>
     </DeprecatedClass>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-      <code><![CDATA[protected function tearDown(): void]]></code>
-    </MissingOverrideAttribute>
   </file>
   <file src="test/HttpMethodOverrideListenerTest.php">
     <ClassMustBeFinal>
@@ -1080,9 +1028,6 @@
       <code><![CDATA[$problem->status]]></code>
       <code><![CDATA[$problem->status]]></code>
     </InaccessibleProperty>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$problem->detail]]></code>
       <code><![CDATA[$problem->detail]]></code>
@@ -1117,9 +1062,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[RequestTest]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <PossiblyFalseOperand>
       <code><![CDATA[realpath(__FILE__)]]></code>
       <code><![CDATA[realpath(__FILE__)]]></code>
@@ -1138,8 +1080,5 @@
       <code><![CDATA[UploadFile]]></code>
       <code><![CDATA[new UploadFile()]]></code>
     </DeprecatedClass>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
   </file>
 </files>

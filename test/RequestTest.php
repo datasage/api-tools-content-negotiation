@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LaminasTest\ApiTools\ContentNegotiation;
 
 use Laminas\ApiTools\ContentNegotiation\Request;
+use Override;
 use PHPUnit\Framework\TestCase;
 use ReflectionObject;
 use ReflectionProperty;
@@ -18,6 +19,7 @@ class RequestTest extends TestCase
     /** @var Request */
     protected $request;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->request = new Request();

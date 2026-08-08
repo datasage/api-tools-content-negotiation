@@ -6,6 +6,8 @@ namespace LaminasTest\ApiTools\ContentNegotiation;
 
 use Laminas\ApiTools\ContentNegotiation\AcceptFilterListener;
 use Laminas\Http\Headers;
+use Override;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use ReflectionMethod;
@@ -17,14 +19,13 @@ class AcceptFilterListenerTest extends TestCase
     /** @var AcceptFilterListener */
     protected $listener;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->listener = new AcceptFilterListener();
     }
 
-    /**
-     * @group 58
-     */
+    #[Group('58')]
     public function testMissingAcceptHeaderIndicatesValidMediaType(): void
     {
         $headers = $this->prophesize(Headers::class);
