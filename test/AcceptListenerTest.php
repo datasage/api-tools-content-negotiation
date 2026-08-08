@@ -15,6 +15,8 @@ use Laminas\Stdlib\RequestInterface;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ModelInterface;
 use LaminasTest\ApiTools\ContentNegotiation\TestAsset\ContentTypeController;
+use Override;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 class AcceptListenerTest extends TestCase
@@ -30,6 +32,7 @@ class AcceptListenerTest extends TestCase
     /** @var ContentTypeController */
     protected $controller;
 
+    #[Override]
     protected function setUp(): void
     {
         $plugins = new ControllerPluginManager(new ServiceManager());
@@ -85,9 +88,7 @@ class AcceptListenerTest extends TestCase
         $this->assertInstanceOf(ModelInterface::class, $result);
     }
 
-    /**
-     * @group 22
-     */
+    #[Group('22')]
     public function testShouldExitEarlyIfNonHttpRequestPresentInEvent(): void
     {
         /** @var RequestInterface $request */

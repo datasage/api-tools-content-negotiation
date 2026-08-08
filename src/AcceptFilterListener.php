@@ -8,6 +8,7 @@ use Laminas\ApiTools\ApiProblem\ApiProblem;
 use Laminas\ApiTools\ApiProblem\ApiProblemResponse;
 use Laminas\Http\Headers as HttpHeaders;
 use Laminas\Mvc\MvcEvent;
+use Override;
 
 use function is_array;
 use function is_string;
@@ -20,6 +21,7 @@ class AcceptFilterListener extends ContentTypeFilterListener
      *
      * @return null|ApiProblemResponse
      */
+    #[Override]
     public function onRoute(MvcEvent $e)
     {
         if (empty($this->config)) {

@@ -9,6 +9,7 @@ use Laminas\ApiTools\Hal\Collection as HalCollection;
 use Laminas\ApiTools\Hal\Entity as HalEntity;
 use Laminas\Json\Json;
 use Laminas\View\Model\JsonModel as BaseJsonModel;
+use Override;
 
 use function json_last_error;
 use function method_exists;
@@ -37,6 +38,7 @@ class JsonModel extends BaseJsonModel
      * @param  bool $overwrite
      * @return self
      */
+    #[Override]
     public function setVariables($variables, $overwrite = false)
     {
         if (
@@ -55,6 +57,7 @@ class JsonModel extends BaseJsonModel
      * @param  bool $flag
      * @return self
      */
+    #[Override]
     public function setTerminal($flag)
     {
         // Do nothing; should always terminate
@@ -74,6 +77,7 @@ class JsonModel extends BaseJsonModel
      *
      * @return string
      */
+    #[Override]
     public function serialize()
     {
         $variables = $this->getVariables();

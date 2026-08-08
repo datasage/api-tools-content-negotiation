@@ -6,6 +6,7 @@ namespace Laminas\ApiTools\ContentNegotiation;
 
 use Laminas\Stdlib\AbstractOptions;
 use Laminas\Stdlib\Exception\BadMethodCallException;
+use Override;
 
 use function array_merge_recursive;
 use function str_replace;
@@ -45,6 +46,7 @@ class ContentNegotiationOptions extends AbstractOptions
      *
      * @see self::normalizeOptions
      */
+    #[Override]
     public function setFromArray($options)
     {
         return parent::setFromArray(
@@ -117,6 +119,7 @@ class ContentNegotiationOptions extends AbstractOptions
      * @throws BadMethodCallException
      * @return void
      */
+    #[Override]
     public function __set($key, $value)
     {
         parent::__set($this->normalizeKey($key), $value);
@@ -135,6 +138,7 @@ class ContentNegotiationOptions extends AbstractOptions
      * @throws BadMethodCallException
      * @return mixed
      */
+    #[Override]
     public function __get($key)
     {
         return parent::__get($this->normalizeKey($key));

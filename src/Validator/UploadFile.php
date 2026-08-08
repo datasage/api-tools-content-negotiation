@@ -6,6 +6,7 @@ namespace Laminas\ApiTools\ContentNegotiation\Validator;
 
 use Laminas\Stdlib\RequestInterface;
 use Laminas\Validator\File\UploadFile as BaseValidator;
+use Override;
 
 use function count;
 use function method_exists;
@@ -33,6 +34,7 @@ class UploadFile extends BaseValidator
      * @param mixed $value
      * @return bool
      */
+    #[Override]
     public function isValid($value)
     {
         if (

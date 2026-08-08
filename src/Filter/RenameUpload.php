@@ -8,6 +8,7 @@ use Laminas\Filter\Exception\RuntimeException as FilterRuntimeException;
 use Laminas\Filter\File\RenameUpload as BaseFilter;
 use Laminas\Stdlib\ErrorHandler;
 use Laminas\Stdlib\RequestInterface;
+use Override;
 
 use function method_exists;
 use function rename;
@@ -41,6 +42,7 @@ class RenameUpload extends BaseFilter
      * @return bool
      * @throws FilterRuntimeException In the event of a warning.
      */
+    #[Override]
     protected function moveUploadedFile($sourceFile, $targetFile)
     {
         if (

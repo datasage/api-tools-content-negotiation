@@ -6,6 +6,8 @@ namespace Laminas\ApiTools\ContentNegotiation\Filter;
 
 use DirectoryIterator;
 use Laminas\Http\Request as HttpRequest;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
@@ -36,6 +38,7 @@ class RenameUploadTest extends TestCase
     /** @var string */
     protected $targetDir;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->tmpDir    = sys_get_temp_dir() . '/api-tools-content-negotiation-filter';
@@ -47,6 +50,7 @@ class RenameUploadTest extends TestCase
         mkdir($this->targetDir);
     }
 
+    #[Override]
     protected function tearDown(): void
     {
         if (! is_dir($this->tmpDir)) {
@@ -115,9 +119,7 @@ class RenameUploadTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider uploadMethods
-     */
+    #[DataProvider('uploadMethods')]
     public function testMoveUploadedFileSucceedsOnPutAndPatchHttpRequests(string $method): void
     {
         $target  = $this->targetDir . DIRECTORY_SEPARATOR . 'uploaded.txt';

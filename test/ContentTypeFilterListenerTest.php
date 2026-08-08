@@ -9,6 +9,8 @@ use Laminas\ApiTools\ContentNegotiation\ContentTypeFilterListener;
 use Laminas\Http\Request;
 use Laminas\Mvc\MvcEvent;
 use LaminasTest\ApiTools\ContentNegotiation\TestAsset\ContentTypeController;
+use Override;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 class ContentTypeFilterListenerTest extends TestCase
@@ -21,6 +23,7 @@ class ContentTypeFilterListenerTest extends TestCase
     /** @var MvcEvent */
     protected $event;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->listener = new ContentTypeFilterListener();
@@ -66,9 +69,7 @@ class ContentTypeFilterListenerTest extends TestCase
         $this->assertStringContainsString('Invalid content-type', $response->getApiProblem()->detail);
     }
 
-    /**
-     * @group 66
-     */
+    #[Group('66')]
     public function testCastsObjectBodyContentToStringBeforeWorkingWithIt(): void
     {
         $contentType = 'application/vnd.laminas.v1.foo+json';

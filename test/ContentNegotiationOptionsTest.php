@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LaminasTest\ApiTools\ContentNegotiation;
 
 use Laminas\ApiTools\ContentNegotiation\ContentNegotiationOptions;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class ContentNegotiationOptionsTest extends TestCase
@@ -20,9 +21,7 @@ class ContentNegotiationOptionsTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider dashSeparatedOptions
-     */
+    #[DataProvider('dashSeparatedOptions')]
     public function testSetNormalizesDashSeparatedKeysToUnderscoreSeparated(string $key, string $normalized): void
     {
         $options         = new ContentNegotiationOptions();
@@ -31,9 +30,7 @@ class ContentNegotiationOptionsTest extends TestCase
         $this->assertEquals(['value'], $options->{$normalized});
     }
 
-    /**
-     * @dataProvider dashSeparatedOptions
-     */
+    #[DataProvider('dashSeparatedOptions')]
     public function testConstructorAllowsDashSeparatedKeys(string $key, string $normalized): void
     {
         $options = new ContentNegotiationOptions([$key => ['value']]);
@@ -41,9 +38,7 @@ class ContentNegotiationOptionsTest extends TestCase
         $this->assertEquals(['value'], $options->{$normalized});
     }
 
-    /**
-     * @dataProvider dashSeparatedOptions
-     */
+    #[DataProvider('dashSeparatedOptions')]
     public function testDashAndUnderscoreSeparatedValuesGetMerged(string $key, string $normalized): void
     {
         $keyValue        = 'valueKey';
