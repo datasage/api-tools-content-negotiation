@@ -91,8 +91,7 @@ class AcceptListenerTest extends TestCase
     #[Group('22')]
     public function testShouldExitEarlyIfNonHttpRequestPresentInEvent(): void
     {
-        /** @var RequestInterface $request */
-        $request = $this->getMockBuilder(RequestInterface::class)->getMock();
+        $request = $this->createStub(RequestInterface::class);
         $this->event->setRequest($request);
 
         $listener = $this->listener;
