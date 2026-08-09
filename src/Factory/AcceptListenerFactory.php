@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Laminas\ApiTools\ContentNegotiation\Factory;
 
-use Interop\Container\ContainerInterface;
 use Laminas\ApiTools\ContentNegotiation\AcceptListener;
 use Laminas\ApiTools\ContentNegotiation\ContentNegotiationOptions;
 use Laminas\Mvc\Controller\Plugin\AcceptableViewModelSelector;
+use Psr\Container\ContainerInterface;
 
 class AcceptListenerFactory
 {

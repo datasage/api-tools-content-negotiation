@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Laminas\ApiTools\ContentNegotiation\Factory;
 
-use Interop\Container\ContainerInterface;
 use Laminas\ApiTools\ContentNegotiation\AcceptFilterListener;
 use Laminas\ApiTools\ContentNegotiation\ContentNegotiationOptions;
+use Psr\Container\ContainerInterface;
 
 class AcceptFilterListenerFactory
 {

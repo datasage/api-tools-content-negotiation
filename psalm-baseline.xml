@@ -454,34 +454,14 @@
     </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[RenameUpload]]></code>
-      <code><![CDATA[RenameUpload]]></code>
-      <code><![CDATA[RenameUpload::class]]></code>
       <code><![CDATA[new RenameUpload($options)]]></code>
     </DeprecatedClass>
-    <DeprecatedInterface>
-      <code><![CDATA[RenameUploadFilterFactory]]></code>
-    </DeprecatedInterface>
-    <DeprecatedMethod>
-      <code><![CDATA[getServiceLocator]]></code>
-    </DeprecatedMethod>
     <MixedArgument>
       <code><![CDATA[$container->get('Request')]]></code>
     </MixedArgument>
-    <ParamNameMismatch>
-      <code><![CDATA[$container]]></code>
-    </ParamNameMismatch>
     <PossiblyNullArgument>
       <code><![CDATA[$options]]></code>
     </PossiblyNullArgument>
-    <PossiblyUnusedMethod>
-      <code><![CDATA[setCreationOptions]]></code>
-    </PossiblyUnusedMethod>
-    <RedundantConditionGivenDocblockType>
-      <code><![CDATA[$container->getServiceLocator()]]></code>
-    </RedundantConditionGivenDocblockType>
-    <RiskyTruthyFalsyComparison>
-      <code><![CDATA[$requestedName]]></code>
-    </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Factory/UploadFileValidatorFactory.php">
     <ClassMustBeFinal>
@@ -489,33 +469,11 @@
     </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[UploadFile]]></code>
-      <code><![CDATA[UploadFile]]></code>
-      <code><![CDATA[UploadFile::class]]></code>
       <code><![CDATA[new UploadFile($options)]]></code>
     </DeprecatedClass>
-    <DeprecatedInterface>
-      <code><![CDATA[UploadFileValidatorFactory]]></code>
-    </DeprecatedInterface>
-    <DeprecatedMethod>
-      <code><![CDATA[getServiceLocator]]></code>
-      <code><![CDATA[getServiceLocator]]></code>
-    </DeprecatedMethod>
     <MixedArgument>
       <code><![CDATA[$container->get('Request')]]></code>
     </MixedArgument>
-    <ParamNameMismatch>
-      <code><![CDATA[$container]]></code>
-    </ParamNameMismatch>
-    <PossiblyUnusedMethod>
-      <code><![CDATA[setCreationOptions]]></code>
-    </PossiblyUnusedMethod>
-    <RedundantConditionGivenDocblockType>
-      <code><![CDATA[$container->getServiceLocator()]]></code>
-      <code><![CDATA[$container->getServiceLocator()]]></code>
-    </RedundantConditionGivenDocblockType>
-    <RiskyTruthyFalsyComparison>
-      <code><![CDATA[$requestedName]]></code>
-    </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Filter/RenameUpload.php">
     <ClassMustBeFinal>
@@ -566,9 +524,6 @@
     <DeprecatedMethod>
       <code><![CDATA[entity]]></code>
     </DeprecatedMethod>
-    <DocblockTypeContradiction>
-      <code><![CDATA[false === $serialized]]></code>
-    </DocblockTypeContradiction>
     <ImplementedParamTypeMismatch>
       <code><![CDATA[$variables]]></code>
       <code><![CDATA[$variables]]></code>
@@ -587,7 +542,11 @@
     <MixedAssignment>
       <code><![CDATA[$variables]]></code>
       <code><![CDATA[$variables]]></code>
+      <code><![CDATA[$variables]]></code>
     </MixedAssignment>
+    <MixedReturnStatement>
+      <code><![CDATA[$variables->toJson()]]></code>
+    </MixedReturnStatement>
     <ParamNameMismatch>
       <code><![CDATA[$flag]]></code>
       <code><![CDATA[$flag]]></code>
@@ -1050,6 +1009,9 @@
     <ClassMustBeFinal>
       <code><![CDATA[JsonModelTest]]></code>
     </ClassMustBeFinal>
+    <DeprecatedClass>
+      <code><![CDATA[$jsonModel->setJsonpCallback('callback')]]></code>
+    </DeprecatedClass>
     <InvalidArgument>
       <code><![CDATA[new TestAsset\ModelWithJson()]]></code>
     </InvalidArgument>

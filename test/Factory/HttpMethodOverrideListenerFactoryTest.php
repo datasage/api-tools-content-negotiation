@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace LaminasTest\ApiTools\ContentNegotiation\Factory;
 
-use Interop\Container\ContainerInterface;
 use Laminas\ApiTools\ContentNegotiation\ContentNegotiationOptions;
 use Laminas\ApiTools\ContentNegotiation\Factory\HttpMethodOverrideListenerFactory;
 use Laminas\ApiTools\ContentNegotiation\HttpMethodOverrideListener;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
+use Psr\Container\ContainerInterface;
 
 class HttpMethodOverrideListenerFactoryTest extends TestCase
 {
