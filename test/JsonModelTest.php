@@ -99,4 +99,42 @@ class JsonModelTest extends TestCase
 
         $this->assertEquals($expected, $data);
     }
+
+    /**
+     * Laminas\Json\Json::encode() gave an object's toArray() precedence over native
+     * encoding. json_encode() would emit the public properties instead, so JsonModel
+     * keeps that branch; this pins it.
+     */
+    public function testSerializesHalEntityExposingToArrayViaToArray(): void
+    {
+        $jsonModel = new JsonModel([
+            'payload' => new HalEntity(new TestAsset\EntityWithToArray(), 'id'),
+        ]);
+
+        $this->assertSame('{"from":"toArray"}', $jsonModel->serialize());
+    }
+
+    /**
+     * toJson() took precedence over toArray() under Laminas\Json\Json::encode(), and its
+     * return value was used verbatim.
+     */
+    public function testSerializesHalEntityExposingToJsonViaToJson(): void
+    {
+        $jsonModel = new JsonModel([
+            'payload' => new HalEntity(new TestAsset\EntityWithToJson(), 'id'),
+        ]);
+
+        $this->assertSame('{"from":"toJson"}', $jsonModel->serialize());
+    }
+
+    /**
+     * The jsonp callback wraps the same encoded payload the plain path produces.
+     */
+    public function testJsonpCallbackWrapsTheEncodedPayload(): void
+    {
+        $jsonModel = new JsonModel(['some' => 'content']);
+        $jsonModel->setJsonpCallback('callback');
+
+        $this->assertSame('callback({"some":"content"});', $jsonModel->serialize());
+    }
 }

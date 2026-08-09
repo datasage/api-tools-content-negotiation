@@ -7,10 +7,11 @@ namespace Laminas\ApiTools\ContentNegotiation;
 use JsonSerializable;
 use Laminas\ApiTools\Hal\Collection as HalCollection;
 use Laminas\ApiTools\Hal\Entity as HalEntity;
-use Laminas\Json\Json;
 use Laminas\View\Model\JsonModel as BaseJsonModel;
 use Override;
 
+use function is_object;
+use function json_encode;
 use function json_last_error;
 use function method_exists;
 
@@ -99,17 +100,46 @@ class JsonModel extends BaseJsonModel
             $variables = $variables->getCollection();
         }
 
-        if (null !== $this->jsonpCallback) {
-            return $this->jsonpCallback . '(' . Json::encode($variables) . ');';
-        }
-
-        $serialized = Json::encode($variables);
+        $serialized = $this->encodeVariables($variables);
 
         if (false === $serialized) {
             $this->raiseError(json_last_error());
         }
 
+        if (null !== $this->jsonpCallback) {
+            return $this->jsonpCallback . '(' . $serialized . ');';
+        }
+
         return $serialized;
+    }
+
+    /**
+     * Encode variables as JSON.
+     *
+     * Replaces Laminas\Json\Json::encode(), which is not a thin wrapper around
+     * json_encode(): it gives objects exposing toJson() or toArray() precedence over
+     * native encoding. Both branches are preserved here, because the HAL entity and
+     * collection unwrapped above commonly expose toArray(), and json_encode() would
+     * otherwise serialize their public properties instead.
+     *
+     * Arrays, plain objects and JsonSerializable implementations encode identically
+     * either way, as does escaping.
+     *
+     * @return string|false
+     */
+    private function encodeVariables(mixed $variables)
+    {
+        if (is_object($variables)) {
+            if (method_exists($variables, 'toJson')) {
+                return $variables->toJson();
+            }
+
+            if (method_exists($variables, 'toArray')) {
+                $variables = $variables->toArray();
+            }
+        }
+
+        return json_encode($variables);
     }
 
     /**

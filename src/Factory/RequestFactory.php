@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Laminas\ApiTools\ContentNegotiation\Factory;
 
-use Interop\Container\ContainerInterface;
 use Laminas\ApiTools\ContentNegotiation\Request as HttpRequest;
 use Laminas\Console\Console;
 use Laminas\Console\Request as ConsoleRequest;
+use Psr\Container\ContainerInterface;
 
 use function class_exists;
 

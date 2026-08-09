@@ -30,12 +30,6 @@
             </errorLevel>
         </RedundantConditionGivenDocblockType>
 
-        <MixedArgumentTypeCoercion>
-            <errorLevel type="suppress">
-                <file name="src/Factory/UploadFileValidatorFactory.php"/>
-            </errorLevel>
-        </MixedArgumentTypeCoercion>
-
         <MoreSpecificImplementedParamType>
             <errorLevel type="suppress">
                 <file name="src/Factory/UploadFileValidatorFactory.php"/>
