@@ -11,29 +11,9 @@ use Laminas\ApiTools\ContentNegotiation\ControllerPlugin;
 use Laminas\ApiTools\ContentNegotiation\Factory;
 use Laminas\ApiTools\ContentNegotiation\HttpMethodOverrideListener;
 use Laminas\ApiTools\ContentNegotiation\JsonModel;
-use Laminas\Filter\File\RenameUpload;
 use Laminas\ServiceManager\Factory\InvokableFactory;
-use Laminas\Validator\File\UploadFile;
 
 return [
-    'filters'                       => [
-        'factories' => [
-            // Overwrite RenameUpload filter's factory
-            RenameUpload::class => Factory\RenameUploadFilterFactory::class,
-
-            // v2 support
-            'laminasfilterfilerenameupload' => Factory\RenameUploadFilterFactory::class,
-        ],
-    ],
-    'validators'                    => [
-        'factories' => [
-            // Overwrite UploadFile validator's factory
-            UploadFile::class => Factory\UploadFileValidatorFactory::class,
-
-            // v2 support
-            'laminasvalidatorfileuploadfile' => Factory\UploadFileValidatorFactory::class,
-        ],
-    ],
     'service_manager'               => [
         'factories' => [
             ContentTypeListener::class        => InvokableFactory::class,
