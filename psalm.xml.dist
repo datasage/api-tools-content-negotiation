@@ -29,12 +29,6 @@
                 <directory name="test"/>
             </errorLevel>
         </RedundantConditionGivenDocblockType>
-
-        <MoreSpecificImplementedParamType>
-            <errorLevel type="suppress">
-                <file name="src/Factory/UploadFileValidatorFactory.php"/>
-            </errorLevel>
-        </MoreSpecificImplementedParamType>
     </issueHandlers>
 
     <plugins>
